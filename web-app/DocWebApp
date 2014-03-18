@@ -1,0 +1,28 @@
+:::::::::::::::::::web-app::::::::::::::::::::
+
+1)Instalacion de BD 
+
+Oracle 10g Release 2
+	1.1 Con manejador de paquetes apt
+
+# echo "deb http://oss.oracle.com/debian/ unstable main non-free" >> /etc/apt/sources.list
+# apt-get update
+# apt-get install oracle-xe-client 
+# apt-get install oracle-xe
+# sh /etc/init.d/oracle-sh configure
+
+	1.2 Descarga de paquetes -wget-
+
+$wget https://oss.oracle.com/debian/dists/unstable/non-free/binary-i386/oracle-xe_10.2.0.1-1.1_i386.deb
+$wget https://oss.oracle.com/debian/dists/unstable/main/binary-i386/libaio_0.3.104-1_i386.deb
+$sudo dpkg -i libaio_0.3.104-1_i386.deb
+$sudo dpkg -i oracle-xe_10.2.0.1-1.1_i386.deb
+$sudo /etc/init.d/oracle-xe configure
+
+	1.3 Configuracion de la BD
+
+Cuando configuramos mediante la instruccion /etc/init.d/oracle-xe configure, nos solicitara
+indiquemos el puerto y el password para el usuario system, asi como si deseamos que nuestra
+BD se inicie desde el arranque del sistema.
+
+
