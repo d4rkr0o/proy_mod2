@@ -50,6 +50,9 @@
    </hash>
    <hash n="oracle.bm.commonIde.data.project.ModelerProjectSettings">
       <hash n="modelersContentSet">
+         <list n="pattern-filters">
+            <string v="+**"/>
+         </list>
          <list n="url-path">
             <url path="model/"/>
          </list>
