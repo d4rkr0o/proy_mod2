@@ -1,0 +1,40 @@
+<ui:composition template="WEB-INF/templates/template.jspx"
+             xmlns="http://www.w3.org/1999/xhtml"
+             xmlns:ui="http://java.sun.com/jsf/facelets"
+             xmlns:f="http://java.sun.com/jsf/core"
+             xmlns:h="http://java.sun.com/jsf/html"
+             xmlns:ice="http://www.icesoft.com/icefaces/component">
+
+    <!-- params for page titles-->
+
+    <ui:define name="content">
+        <ice:form>
+        <b><h:outputText value="Titulo Ejemplo" styleClass="titulo-azul"/></b>
+        <br/>
+        <div class="borde">
+            <h:outputText value="Etiqueta ejemplo:" styleClass="letra-azul"/><ice:inputText/>
+           <ice:commandButton value="Da clik" action="#{ejemploMB.mostrarDatos}" styleClass="boton"/>
+            <ice:messages />
+            <ice:dataTable value="#{ejemploMB.ejemplos}"  var="ejem">
+                <ice:column>
+                <f:facet name="header">
+                    <h:outputText value="ID"/>
+                </f:facet>
+                    <h:outputText value="#{ejem.id}"/>
+                </ice:column>
+                 <ice:column>
+                <f:facet name="header">
+                    <h:outputText value="Prueba"/>
+                </f:facet>
+                    <h:outputText value="#{ejem.prueba}"/>
+                </ice:column>
+            </ice:dataTable>
+            </div>
+            <br/>
+        </ice:form>
+        
+
+    </ui:define>
+
+
+</ui:composition>
