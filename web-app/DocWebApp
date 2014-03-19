@@ -31,5 +31,36 @@ BD se inicie desde el arranque del sistema.
 Consulte el directorio bd dentro de web-app/bd , para ver el script de creacion , asi mas informacion relacionada
 a la BD
 
+3) JDeveloper
+
+Se esta utilizando la version de JDeveloper 12c
+Existio un error al instalarlo en un sistema debian. El error tenia estas caracteristicas:
+
+********************************************************************
+
+java.lang.NullPointerException
+at oracle.ide.Ide.getDefaultProject(Ide.java:487)
+at oracle.bm.commonIde.ProjectObserver.update(ProjectObserver.java:57)
+at oracle.ide.model.IdeSubject.notifyObservers(IdeSubject.java:98)
+at oracle.ide.model.Node.notifyObservers(Node.java:786)
+at oracle.ide.model.UpdateMessage.firePropertiesChanged(UpdateMessage.java:640)
+at oracle.ide.model.ProjectContent$L.projectPropertiesChanged(ProjectContent.java:694)
+at oracle.ide.model.Project$StorageListener.structureValuesChanged(Project.java:1097)
+at oracle.javatools.data.Structure.fireStructureChangeEvent(Structure.java:455)
+at oracle.javatools.data.Structure.firePlaceholderValueAdded(Structure.java:388)
+at oracle.javatools.data.Structure.firePlaceholderValueAdded(Structure.java:394)
+at oracle.javatools.data.Structure.firePlaceholderValueAdded(Structure.java:394)
+at oracle.javatools.data.HashStructure$Impl$3.run(HashStructure.java:1970)
+at oracle.javatools.data.HashStructure$Impl.putValueInKeyStruct(HashStructure.java:2021
+
+*******************************************************************
+
+solucion: en esta liga 
+http://www.albinsblog.com/2012/01/unexpected-error-in-jdeveloper-11g.html#.UyoSgm2Qnec
+ 
+
+
+
+
 
 
