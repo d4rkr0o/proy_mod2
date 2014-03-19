@@ -1,14 +1,14 @@
-  CREATE TABLE Usuarios (
-    idUsuarios INTEGER   NOT NULL ,
-    Usuario VARCHAR(45)   NOT NULL ,
-    Contrasena VARCHAR(45)   NOT NULL ,
-    Camp_1 VARCHAR(45)    ,
-    Camp_2 VARCHAR(45)    ,
-    Camp_3 VARCHAR(45)    ,
-    Camp_4 VARCHAR(45)    ,
-    Camp_5 VARCHAR(45)    ,
-    Camp_6 VARCHAR(45)    , 
-    Camp_7 VARCHAR(45)    , 
-    Camp_8 VARCHAR(45)    ,
-    Camp_9 VARCHAR(45)      ,
-  PRIMARY KEY(idUsuarios));
+  CREATE TABLE usuarios (
+    idUsuario INTEGER   NOT NULL ,
+    usuario VARCHAR(45)   NOT NULL ,
+    contrasena VARCHAR(45)   NOT NULL ,
+    camp_1 VARCHAR(45)    ,
+    camp_2 VARCHAR(45)    ,
+    camp_3 VARCHAR(45)    ,
+    camp_4 VARCHAR(45)    ,
+    camp_5 VARCHAR(45)    ,
+    camp_6 VARCHAR(45)    , 
+    camp_7 VARCHAR(45)    , 
+    camp_8 VARCHAR(45)    ,
+    camp_9 VARCHAR(45)    ,
+  PRIMARY KEY(idUsuario));
