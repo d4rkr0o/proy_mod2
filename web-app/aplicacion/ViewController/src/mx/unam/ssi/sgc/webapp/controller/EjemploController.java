@@ -3,12 +3,9 @@ package mx.unam.ssi.sgc.webapp.controller;
 import java.util.ArrayList;
 
 import java.util.List;
-
 import javax.faces.context.FacesContext;
-
 import mx.unam.ssi.sgc.webapp.model.Ejemplo;
 import mx.unam.ssi.sgc.webapp.service.EjemploService;
-
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.jsf.FacesContextUtils;
 
