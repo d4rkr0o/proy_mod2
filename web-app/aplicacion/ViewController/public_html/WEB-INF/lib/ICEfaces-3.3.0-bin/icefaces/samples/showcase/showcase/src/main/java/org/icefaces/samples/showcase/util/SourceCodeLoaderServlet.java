@@ -15,6 +15,7 @@
  */
 
 package org.icefaces.samples.showcase.util;
+
 import com.uwyn.jhighlight.renderer.XhtmlRendererFactory;
 
 import javax.servlet.http.HttpServlet;
