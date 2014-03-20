@@ -1,0 +1,29 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ice="http://www.icesoft.com/icefaces/component">
+    <table style="width:100%">
+        <tr>
+            <td style="width:30%">
+                <ice:graphicImage url="resources/images/nafinsa.png"
+                                  style="border:none;float:left"/>
+            </td>
+            <td style="width:70%">
+                <h:outputText value="México, D.F. 1 de Octubre del 2013 17:22:25" styleClass="fecha-header"/>
+                <br/>
+                <br/>
+                <h:outputText value="L.A. Laura Santos Mora"
+                              styleClass="letra-negra"/>
+                <br/>
+                <h:outputText value="Operador Control de Garantias"
+                              styleClass="letra-azul"/>
+                <br/>
+                <br/>
+                <ui:include src="/WEB-INF/templates/menu.jspx"/>
+            </td>
+        </tr>
+    </table>
+</html>
+
+

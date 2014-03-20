@@ -1,0 +1,28 @@
+<ui:composition template="WEB-INF/templates/template.jspx"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ice="http://www.icesoft.com/icefaces/component">
+    <!-- params for page titles-->
+    <ui:define name="content">
+        <ice:form>
+            <b>RESULTADOS</b>
+            <h:panelGrid columns="2">
+                <h:outputText value="Valor a Registrar"/>
+                <ice:inputText value="#{ejemploMB.ejemplo.prueba}" required="true"/>
+            </h:panelGrid>
+            <ice:commandButton value="Registrar"
+                               action="#{ejemploMB.registrar}"/>
+            <ice:messages showDetail="true" style="color:red" showSummary="false"/>
+            <ice:dataTable value="#{ejemploMB.ejemplos}" var="ejem">
+                <ice:column>
+                    <f:facet name="header">
+                        <h:outputText value="ID"/>
+                    </f:facet>
+                    <h:outputText value="#{ejem.prueba}"/>
+                </ice:column>
+            </ice:dataTable>
+        </ice:form>
+    </ui:define>
+</ui:composition>
