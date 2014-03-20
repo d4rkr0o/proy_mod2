@@ -8,20 +8,10 @@ function mymodule_menu() {
     'title' => 'JSON',
     'description' => 'JSON web service',
     'page callback' => 'ws_json',
-    'access callback' => 1
+    'access callback' => TRUE
   );
   return $items;
 }
-
-
-function ws_json(){
-  $response = array();
-  if (!empty($_POST["index"]) && empty($_POST["idNode"]) && empty($_POST["comentario"])) {
-    retrieveAll();
-  }
-
-}
-
 
 function retrieveAll(){
     $elementos=array();
@@ -33,8 +23,19 @@ function retrieveAll(){
     }
 
 $arr=array("Posts"=>$elementos);
-echo drupal_json_output($arr);
+ drupal_json_output($arr);
 drupal_exit();
 
   }
+
+function ws_json(){
+  $response = array();
+  if (!empty($_POST["index"]) && empty($_POST["idNode"])) {
+    retrieveAll();
+  }
+
+}
+
+
+
 ?>
