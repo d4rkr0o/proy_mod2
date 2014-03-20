@@ -21,6 +21,7 @@ public class EjemploController extends EjemploForm {
     }
 
     public String mostrarDatos() {
+        /*
         ApplicationContext context = 
             FacesContextUtils.getWebApplicationContext(FacesContext.getCurrentInstance());
         EjemploService ejemploService = 
@@ -32,10 +33,13 @@ public class EjemploController extends EjemploForm {
             list.add(new Ejemplo(e.getId(), e.getPrueba()));
         }
         ejemplos = list;
+        
+        */
         return "results";
     }
 
     public String registrar() {
+        /*
         ApplicationContext context = 
             FacesContextUtils.getWebApplicationContext(FacesContext.getCurrentInstance());
         EjemploService ejemploService = 
@@ -44,6 +48,8 @@ public class EjemploController extends EjemploForm {
         addMessage("Exito!","Se registro correctamente");
         ejemplos = ejemploService.buscarEjemplos();
         ejemplo=new Ejemplo();
+        
+        */
         return null;
     }
 

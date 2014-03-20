@@ -48,6 +48,12 @@
       <value n="URI" v="http://www.icesoft.com/icefaces/component"/>
       <value n="version" v=""/>
    </hash>
+   <hash n="oracle.adfdtinternal.model.ide.settings.ADFMSettings">
+      <value n="hasDataControls" v="true"/>
+   </hash>
+   <hash n="oracle.adfdtinternal.view.rich.setting.ADFViewSettings">
+      <value n="ENABLE_ADF_WEBAPP_LIB_SUPPORT" v="true"/>
+   </hash>
    <hash n="oracle.bm.commonIde.data.project.ModelerProjectSettings">
       <hash n="modelersContentSet">
          <list n="pattern-filters">
@@ -60,17 +66,37 @@
    </hash>
    <hash n="oracle.ide.model.ResourcePaths">
       <hash n="resourcesContentSet">
+         <list n="constituent-sets">
+            <hash>
+               <list n="pattern-filters">
+                  <string v="+*"/>
+               </list>
+               <list n="url-path">
+                  <url path="."/>
+               </list>
+            </hash>
+            <hash>
+               <list n="pattern-filters">
+                  <string v="+**"/>
+               </list>
+               <list n="url-path">
+                  <url path="src/main/scripts/"/>
+               </list>
+            </hash>
+         </list>
          <list n="pattern-filters">
             <string v="+*"/>
          </list>
-         <list n="url-path">
-            <url path="."/>
-         </list>
+         <list n="url-path"/>
       </hash>
    </hash>
    <hash n="oracle.ide.model.TechnologyScopeConfiguration">
       <list n="technologyScope">
          <string v="ADF_FACES"/>
+         <string v="ADFc"/>
+         <string v="ADFm"/>
+         <string v="Ant"/>
+         <string v="BIADF"/>
          <string v="JAVASCRIPT"/>
          <string v="JSP"/>
          <string v="HTML"/>
@@ -86,6 +112,9 @@
       <value n="internalEncoding" v="Cp1252"/>
       <value n="webIANAEncoding" v="UTF-8"/>
    </hash>
+   <hash n="oracle.jdeveloper.maven.compiler.MavenConfiguration">
+      <value n="goalToRun" v="package"/>
+   </hash>
    <hash n="oracle.jdeveloper.model.J2eeSettings">
       <value n="j2eeWebAppName" v="Application1-ViewController-webapp"/>
       <value n="j2eeWebContextRoot" v="Application1-ViewController-context-root"/>
@@ -100,12 +129,25 @@
    </hash>
    <hash n="oracle.jdeveloper.model.PathsConfiguration">
       <hash n="javaContentSet">
-         <list n="pattern-filters">
-            <string v="+**"/>
+         <list n="constituent-sets">
+            <hash>
+               <list n="pattern-filters">
+                  <string v="+**"/>
+               </list>
+               <list n="url-path">
+                  <url path="src/test/java/"/>
+               </list>
+            </hash>
+            <hash>
+               <list n="pattern-filters">
+                  <string v="+**"/>
+               </list>
+               <list n="url-path">
+                  <url path="src/"/>
+               </list>
+            </hash>
          </list>
-         <list n="url-path">
-            <url path="src/"/>
-         </list>
+         <list n="url-path"/>
       </hash>
    </hash>
    <hash n="oracle.jdeveloper.offlinedb.model.OfflineDBProjectSettings">
@@ -133,62 +175,596 @@
    <hash n="oracle.jdevimpl.config.JProjectLibraries">
       <list n="exportedReferences">
          <hash>
-            <value n="id" v="Commons Beanutils 1.6"/>
+            <value n="id" v="org.springframework:spring-context:4.0.2.RELEASE:jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="Commons Digester 1.8"/>
+            <value n="id" v="El-api-2.2.1-b03.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="Commons Logging 1.0.4"/>
+            <value n="id" v="Icefaces-ace.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="Commons Collections 3.1"/>
+            <value n="id" v="Icefaces-compat.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="JSP Runtime"/>
+            <value n="id" v="Icefaces.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="Oracle JDBC"/>
+            <value n="id" v="Icepush.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Javax.annotation.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Javax.servlet.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Javax.servlet.jsp.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jstl.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Portlet2-api.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Javax.faces-api-2.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Spring-sources.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Spring.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-beanutils.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-collections.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-digester.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-discovery.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-el.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-fileupload.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-lang.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-logging-api.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-logging.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Krysalis-jCharts-1.0.0-alpha-1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jhighlight-1.0.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
       <hash n="internalDefinitions">
-         <list n="libraryDefinitions"/>
+         <list n="libraryDefinitions">
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/el-api-2.2.1-b03.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="El-api-2.2.1-b03.jar"/>
+               <value n="id" v="El-api-2.2.1-b03.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/icefaces-ace.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Icefaces-ace.jar"/>
+               <value n="id" v="Icefaces-ace.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/icefaces-compat.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Icefaces-compat.jar"/>
+               <value n="id" v="Icefaces-compat.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/icefaces.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Icefaces.jar"/>
+               <value n="id" v="Icefaces.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/icepush.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Icepush.jar"/>
+               <value n="id" v="Icepush.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/javax.annotation.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Javax.annotation.jar"/>
+               <value n="id" v="Javax.annotation.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/javax.servlet.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Javax.servlet.jar"/>
+               <value n="id" v="Javax.servlet.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/javax.servlet.jsp.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Javax.servlet.jsp.jar"/>
+               <value n="id" v="Javax.servlet.jsp.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/jstl.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Jstl.jar"/>
+               <value n="id" v="Jstl.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/portlet2-api.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Portlet2-api.jar"/>
+               <value n="id" v="Portlet2-api.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/javax.faces-api-2.1.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Javax.faces-api-2.1.jar"/>
+               <value n="id" v="Javax.faces-api-2.1.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="${maven:maven.local.repo}org/springframework/spring-context/4.0.2.RELEASE/spring-context-4.0.2.RELEASE.jar"/>
+               </list>
+               <value n="description" v="org.springframework:spring-context:4.0.2.RELEASE:jar"/>
+               <value n="id" v="org.springframework:spring-context:4.0.2.RELEASE:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/el-api-2.2.1-b03.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="El-api-2.2.1-b03.jar1"/>
+               <value n="id" v="El-api-2.2.1-b03.jar1"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/icefaces-ace.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Icefaces-ace.jar1"/>
+               <value n="id" v="Icefaces-ace.jar1"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/icefaces-compat.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Icefaces-compat.jar1"/>
+               <value n="id" v="Icefaces-compat.jar1"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/icefaces.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Icefaces.jar1"/>
+               <value n="id" v="Icefaces.jar1"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/icepush.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Icepush.jar1"/>
+               <value n="id" v="Icepush.jar1"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/javax.annotation.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Javax.annotation.jar1"/>
+               <value n="id" v="Javax.annotation.jar1"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/javax.servlet.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Javax.servlet.jar1"/>
+               <value n="id" v="Javax.servlet.jar1"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/javax.servlet.jsp.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Javax.servlet.jsp.jar1"/>
+               <value n="id" v="Javax.servlet.jsp.jar1"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/jstl.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Jstl.jar1"/>
+               <value n="id" v="Jstl.jar1"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/portlet2-api.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Portlet2-api.jar1"/>
+               <value n="id" v="Portlet2-api.jar1"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/javax.faces-api-2.1.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Javax.faces-api-2.1.jar1"/>
+               <value n="id" v="Javax.faces-api-2.1.jar1"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/icefaces-ace.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="icefaces-ace.jar"/>
+               <value n="id" v="icefaces-ace.jar"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/icefaces-compat.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="icefaces-compat.jar"/>
+               <value n="id" v="icefaces-compat.jar"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="${maven:maven.local.repo}org/springframework/spring-webmvc/spring.version/spring-webmvc-spring.version.jar"/>
+               </list>
+               <value n="description" v="org.springframework:spring-webmvc:spring.version:jar"/>
+               <value n="id" v="org.springframework:spring-webmvc:spring.version:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/spring-2.5/dist/spring-sources.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Spring-sources.jar"/>
+               <value n="id" v="Spring-sources.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/spring-2.5/dist/spring.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Spring.jar"/>
+               <value n="id" v="Spring.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/commons-beanutils.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Commons-beanutils.jar"/>
+               <value n="id" v="Commons-beanutils.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/commons-collections.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Commons-collections.jar"/>
+               <value n="id" v="Commons-collections.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/commons-digester.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Commons-digester.jar"/>
+               <value n="id" v="Commons-digester.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/commons-discovery.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Commons-discovery.jar"/>
+               <value n="id" v="Commons-discovery.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/commons-el.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Commons-el.jar"/>
+               <value n="id" v="Commons-el.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/commons-fileupload.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Commons-fileupload.jar"/>
+               <value n="id" v="Commons-fileupload.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/commons-lang.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Commons-lang.jar"/>
+               <value n="id" v="Commons-lang.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/commons-logging-api.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Commons-logging-api.jar"/>
+               <value n="id" v="Commons-logging-api.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/commons-logging.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Commons-logging.jar"/>
+               <value n="id" v="Commons-logging.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/krysalis-jCharts-1.0.0-alpha-1.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Krysalis-jCharts-1.0.0-alpha-1.jar"/>
+               <value n="id" v="Krysalis-jCharts-1.0.0-alpha-1.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/jhighlight-1.0.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Jhighlight-1.0.jar"/>
+               <value n="id" v="Jhighlight-1.0.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+         </list>
       </hash>
       <list n="libraryReferences">
          <hash>
-            <value n="id" v="Commons Beanutils 1.6"/>
+            <value n="id" v="org.springframework:spring-context:4.0.2.RELEASE:jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="Commons Digester 1.8"/>
+            <value n="id" v="El-api-2.2.1-b03.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="Commons Logging 1.0.4"/>
+            <value n="id" v="Icefaces-ace.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="Commons Collections 3.1"/>
+            <value n="id" v="Icefaces-compat.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="JSP Runtime"/>
+            <value n="id" v="Icefaces.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="Oracle JDBC"/>
+            <value n="id" v="Icepush.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Javax.annotation.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Javax.servlet.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Javax.servlet.jsp.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jstl.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Portlet2-api.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Javax.faces-api-2.1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Spring-sources.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Spring.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-beanutils.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-collections.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-digester.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-discovery.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-el.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-fileupload.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-lang.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-logging-api.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-logging.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Krysalis-jCharts-1.0.0-alpha-1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jhighlight-1.0.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
    </hash>
    <hash n="oracle.jdevimpl.config.JProjectPaths">
       <url n="outputDirectory" path="classes/"/>
+   </hash>
+   <hash n="oracle.jdevimpl.webapp.facelets.libraries.ProjectFaceletsTagLibraries">
+      <list n="facelets-tag-libraries">
+         <hash>
+            <hash n="baseLibrary">
+               <value n="name" v="ADF Faces Components"/>
+               <value n="version" v="11"/>
+            </hash>
+            <value n="name" v="ADF Faces Components"/>
+            <value n="taglibURL" v="@oracle.home@../oracle_common/modules/oracle.adf.view_12.1.2/adf-richclient-impl-11.jar!/META-INF/afu.taglib.xml"/>
+            <value n="URI" v="http://xmlns.oracle.com/adf/faces/rich"/>
+            <value n="version" v="11"/>
+         </hash>
+         <hash>
+            <hash n="baseLibrary">
+               <value n="name" v="JSF Compatibility Tags for Facelets"/>
+               <value n="version" v="11"/>
+            </hash>
+            <value n="name" v="JSF Compatibility Tags for Facelets"/>
+            <value n="taglibURL" v="@oracle.home@../oracle_common/modules/oracle.adf.view_12.1.2/adf-richclient-impl-11.jar!/META-INF/jsp.taglib.xml"/>
+            <value n="URI" v="http://java.sun.com/JSP/Page"/>
+            <value n="version" v="11"/>
+         </hash>
+         <hash>
+            <hash n="baseLibrary">
+               <value n="name" v="ADF Faces Component Tags"/>
+               <value n="version" v="11"/>
+            </hash>
+            <value n="name" v="ADF Faces Component Tags"/>
+            <value n="taglibURL" v="@oracle.home@../oracle_common/modules/oracle.adf.view_12.1.2/adf-richclient-impl-11.jar!/META-INF/component.taglib.xml"/>
+            <value n="URI" v="http://xmlns.oracle.com/adf/faces/rich/component"/>
+            <value n="version" v="11"/>
+         </hash>
+      </list>
    </hash>
    <hash n="oracle.jdevimpl.webapp.jsp.JspVeProjectSettings">
       <list n="servlet_listeners">
@@ -202,40 +778,43 @@
       </list>
    </hash>
    <hash n="oracle.jdevimpl.webapp.jsp.libraries.model.ProjectTagLibraries">
-      <hash n="libraries">
-         <hash n="WEB-INF\lib\icefaces-comps.jar!\META-INF\icefaces_component.tld">
+      <list n="tag-libraries">
+         <hash>
             <value n="jspVersion" v="1.2"/>
-            <value n="name" v="ICEfaces Component Suite"/>
+            <value n="libraries" v="icefaces-compat.jar"/>
+            <value n="name" v="ICE Components"/>
             <value n="prefix" v="ice"/>
-            <value n="runInEditor" v="true"/>
+            <value n="runInEditor" v="false"/>
             <value n="showInPalette" v="true"/>
-            <value n="tldURL" v="WEB-INF/lib/icefaces-comps.jar!/META-INF/icefaces_component.tld"/>
+            <value n="tldURL" v="@project@public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/icefaces-compat.jar!/META-INF/icefaces_component.tld"/>
             <value n="URI" v="http://www.icesoft.com/icefaces/component"/>
-            <value n="version" v="1.6"/>
+            <value n="version" v="3.3.0"/>
          </hash>
-         <hash n="WEB-INF\lib\jsf-impl.jar!\META-INF\html_basic.tld">
-            <hash n="baseLibrary">
-               <value n="name" v="JSF HTML"/>
-               <value n="version" v="1.0"/>
-            </hash>
+      </list>
+      <list n="tag-libraries-internalDefinitions">
+         <hash>
+            <value n="jspVersion" v="2.1"/>
+            <value n="libraries" v="icefaces-ace.jar"/>
+            <value n="name" v="ICEfaces ACE Components"/>
+            <value n="prefix" v="ace"/>
+            <value n="runInEditor" v="false"/>
+            <value n="showInPalette" v="true"/>
+            <value n="tldURL" v="@project@public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/icefaces-ace.jar!/META-INF/components.tld"/>
+            <value n="URI" v="http://www.icefaces.org/icefaces/components"/>
+            <value n="version" v="3.3.0"/>
+         </hash>
+         <hash>
             <value n="jspVersion" v="1.2"/>
-            <value n="name" v="JSF HTML"/>
-            <value n="tldURL" v="WEB-INF/lib/jsf-impl.jar!/META-INF/html_basic.tld"/>
-            <value n="URI" v="http://java.sun.com/jsf/html"/>
-            <value n="version" v="1.0"/>
+            <value n="libraries" v="icefaces-compat.jar"/>
+            <value n="name" v="ICE Components"/>
+            <value n="prefix" v="ice"/>
+            <value n="runInEditor" v="false"/>
+            <value n="showInPalette" v="true"/>
+            <value n="tldURL" v="@project@public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/icefaces-compat.jar!/META-INF/icefaces_component.tld"/>
+            <value n="URI" v="http://www.icesoft.com/icefaces/component"/>
+            <value n="version" v="3.3.0"/>
          </hash>
-         <hash n="WEB-INF\lib\jsf-impl.jar!\META-INF\jsf_core.tld">
-            <hash n="baseLibrary">
-               <value n="name" v="JSF Core"/>
-               <value n="version" v="1.0"/>
-            </hash>
-            <value n="jspVersion" v="1.2"/>
-            <value n="name" v="JSF Core"/>
-            <value n="tldURL" v="WEB-INF/lib/jsf-impl.jar!/META-INF/jsf_core.tld"/>
-            <value n="URI" v="http://java.sun.com/jsf/core"/>
-            <value n="version" v="1.0"/>
-         </hash>
-      </hash>
+      </list>
    </hash>
    <hash n="oracle.tip.tools.ide.pm.addin.PMProjectSettings">
       <hash n="Integration_Content"/>
