@@ -13,7 +13,6 @@
           org.springframework.web.context.ContextLoaderListener
     </listener-class>
   </listener>
-    
     <context-param>
         <param-name>com.icesoft.faces.debugDOMUpdate</param-name>
         <param-value>false</param-value>
@@ -40,18 +39,7 @@
         <param-name>javax.faces.application.CONFIG_FILES</param-name>
         <param-value>/WEB-INF/faces-config.xml</param-value>
     </context-param>
-    <listener>
-        <listener-class>com.icesoft.faces.util.event.servlet.ContextEventRepeater</listener-class>
-    </listener>
-    <listener>
-        <listener-class>com.sun.faces.config.ConfigureListener</listener-class>
-    </listener>
-    <listener>
-        <listener-class>oracle.adf.mbean.share.connection.ADFConnectionLifeCycleCallBack</listener-class>
-    </listener>
-    <listener>
-        <listener-class>oracle.adf.mbean.share.config.ADFConfigLifeCycleCallBack</listener-class>
-    </listener>
+
     
     <servlet>
         <servlet-name>Faces Servlet</servlet-name>
@@ -75,44 +63,10 @@
         <param-name>javax.faces.FACELETS_SKIP_COMMENTS</param-name>
         <param-value>true</param-value>
     </context-param>
-    <servlet>
-        <servlet-name>Persistent Faces Servlet</servlet-name>
-        <servlet-class>com.icesoft.faces.webapp.xmlhttp.PersistentFacesServlet</servlet-class>
-        <load-on-startup> 1 </load-on-startup>
-    </servlet>
  
-    <servlet>
-        <servlet-name>Blocking Servlet</servlet-name>
-        <servlet-class>com.icesoft.faces.webapp.xmlhttp.BlockingServlet</servlet-class>
-        <load-on-startup> 1 </load-on-startup>
-    </servlet>
  
     <!-- extension mapping -->
-    <servlet>
-        <servlet-name>uploadServlet</servlet-name>
-        <servlet-class>com.icesoft.faces.component.inputfile.FileUploadServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
-    <servlet>
-        <servlet-name>resources</servlet-name>
-        <servlet-class>org.apache.myfaces.trinidad.webapp.ResourceServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>BIGRAPHSERVLET</servlet-name>
-        <servlet-class>oracle.adf.view.faces.bi.webapp.GraphServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>BIGAUGESERVLET</servlet-name>
-        <servlet-class>oracle.adf.view.faces.bi.webapp.GaugeServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>MapProxyServlet</servlet-name>
-        <servlet-class>oracle.adf.view.faces.bi.webapp.MapProxyServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>adflibResources</servlet-name>
-        <servlet-class>oracle.adf.library.webapp.ResourceServlet</servlet-class>
-    </servlet>
+
     <servlet-mapping>
         <servlet-name>Persistent Faces Servlet</servlet-name>
         <url-pattern>*.jsf</url-pattern>
@@ -180,9 +134,11 @@
     <session-config>
         <session-timeout>35</session-timeout>
     </session-config>
+    
    <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>./index.jsp</welcome-file>
    </welcome-file-list>
+   
 <context-param>
  <param-name>javax.faces.DEFAULT_SUFFIX</param-name>
  <param-value>.jspx</param-value>
@@ -218,18 +174,7 @@
         <param-name>oracle.adf.view.rich.dvt.DEFAULT_IMAGE_FORMAT</param-name>
         <param-value>HTML5</param-value>
     </context-param>
-    <filter>
-        <filter-name>trinidad</filter-name>
-        <filter-class>org.apache.myfaces.trinidad.webapp.TrinidadFilter</filter-class>
-    </filter>
-    <filter>
-        <filter-name>ADFLibraryFilter</filter-name>
-        <filter-class>oracle.adf.library.webapp.LibraryFilter</filter-class>
-    </filter>
-    <filter>
-        <filter-name>adfBindings</filter-name>
-        <filter-class>oracle.adf.model.servlet.ADFBindingFilter</filter-class>
-    </filter>
+
     <filter-mapping>
         <filter-name>trinidad</filter-name>
         <servlet-name>Faces Servlet</servlet-name>

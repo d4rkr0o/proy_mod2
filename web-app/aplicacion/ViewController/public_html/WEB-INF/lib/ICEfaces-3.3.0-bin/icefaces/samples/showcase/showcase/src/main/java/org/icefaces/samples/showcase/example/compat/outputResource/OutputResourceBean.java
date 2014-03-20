@@ -153,6 +153,8 @@ class NamedResource implements Resource, Serializable {
         return name;
     }
 
+
+    @SuppressWarnings("oracle.jdeveloper.java.tag-is-missing")
     public Date lastModified() {
         return new Date(file.lastModified());
     }
@@ -206,6 +208,8 @@ class MyResource implements Resource, Serializable {
         return customName;
     }
 
+
+    @SuppressWarnings("oracle.jdeveloper.java.tag-is-missing")
     public Date lastModified() {
         return lastModified;
     }
