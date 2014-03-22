@@ -201,6 +201,7 @@ class MyResource implements Resource, Serializable {
         }
         return inputStream;
     }
+    
 
     public String calculateDigest() {
         return customName;
