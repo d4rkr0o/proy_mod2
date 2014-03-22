@@ -1,0 +1,19 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ice="http://www.icesoft.com/icefaces/component"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <ice:form>
+        <div class="alinear-izquierda">
+            <h:commandLink value="Acerca de Nafinsa" styleClass="letra-blanca"/>
+            <h:outputText value="  |  "/>
+            <h:commandLink value="Mapa de Sitio" styleClass="letra-blanca"/>
+            <h:outputText value="  |  "/>
+            <h:commandLink value="Aviso de Privacidad" styleClass="letra-blanca"/>
+        </div>
+        <br/>
+        <br/>
+        <h:outputText value="Todos los derechos reservados Nacional Financiera 2012 Av. Insurgentes Sur 1971 , Col. Guadalupe Inn , C.P. 01020 México D.F."/>
+    </ice:form>
+</html>
+
