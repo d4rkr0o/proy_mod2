@@ -2,7 +2,7 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          version="2.5" xmlns="http://java.sun.com/xml/ns/javaee">
-    <description>Arquitectura WEB NAFINSA</description>
+    <description>Arquitectura WEB-APP</description>
     <context-param>
 	<param-name>contextConfigLocation</param-name>
 	<param-value>/WEB-INF/applicationContext*.xml</param-value>
@@ -22,10 +22,6 @@
     <context-param>
         <param-name>javax.faces.STATE_SAVING_METHOD</param-name>
         <param-value>server</param-value>
-        <description>
-            State saving method: "client" or "server" (= default)
-            See JSF Specification 2.5.2
-        </description>
     </context-param>
    
     <context-param>
@@ -43,9 +39,11 @@
         <param-name>javax.faces.application.CONFIG_FILES</param-name>
         <param-value>/WEB-INF/faces-config.xml</param-value>
     </context-param>
+    
     <listener>
         <listener-class>com.icesoft.faces.util.event.servlet.ContextEventRepeater</listener-class>
     </listener>
+    
     <listener>
         <listener-class>com.sun.faces.config.ConfigureListener</listener-class>
     </listener>
