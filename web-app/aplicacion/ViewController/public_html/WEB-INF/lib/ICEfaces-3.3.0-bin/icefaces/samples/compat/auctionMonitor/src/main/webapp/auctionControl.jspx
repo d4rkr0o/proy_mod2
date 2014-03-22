@@ -21,8 +21,7 @@
         xmlns:f="http://java.sun.com/jsf/core"
         xmlns:ice="http://www.icesoft.com/icefaces/component">
 
-    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+  
 <html>
     <head><title>Auction Monitor Control</title>
         <meta http-equiv="Content-Type"
