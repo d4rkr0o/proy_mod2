@@ -60,6 +60,10 @@
       <string v="oracle.weblogic.jdeveloper.migration.addin/weblogicMigrationContentSet"/>
    </list>
    <value n="defaultPackage" v="mx.unam.ssi.view"/>
+   <hash n="ejbModuleContainer">
+      <value n="dbConnection" v="WebApp"/>
+      <value n="ejbVersion" v="3.0"/>
+   </hash>
    <hash n="JspLibrary">
       <value n="jspVersion" v="1.2"/>
       <value n="name" v="ICEfaces Component Suite"/>
@@ -90,6 +94,7 @@
    <hash n="oracle.ide.model.TechnologyScopeConfiguration">
       <list n="technologyScope">
          <string v="Ant"/>
+         <string v="EJB"/>
          <string v="JAVASCRIPT"/>
          <string v="JSP"/>
          <string v="HTML"/>
@@ -97,12 +102,18 @@
          <string v="Java"/>
          <string v="Maven"/>
          <string v="Spring"/>
+         <string v="WSPolicy"/>
+         <string v="WebLogicSCA"/>
          <string v="XML"/>
          <string v="XML_SCHEMA"/>
       </list>
    </hash>
    <hash n="oracle.jdeveloper.compiler.OjcConfiguration">
       <value n="internalEncoding" v="Cp1252"/>
+   </hash>
+   <hash n="oracle.jdeveloper.deploy.dt.DeploymentProfiles">
+      <hash n="profileDefinitions"/>
+      <list n="profileList"/>
    </hash>
    <hash n="oracle.jdeveloper.model.J2eeSettings">
       <value n="j2eeWebAppName" v="Application1-ViewController-webapp"/>
@@ -258,6 +269,10 @@
          </hash>
          <hash>
             <value n="id" v="icefaces-compat.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Java EE"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
@@ -532,6 +547,10 @@
             <value n="id" v="icefaces-compat.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
+         <hash>
+            <value n="id" v="Java EE"/>
+            <value n="isJDK" v="false"/>
+         </hash>
       </list>
    </hash>
    <hash n="oracle.jdevimpl.config.JProjectPaths">
@@ -670,6 +689,11 @@
          <list n="pattern-filters">
             <string v="+**"/>
          </list>
+      </hash>
+   </hash>
+   <hash n="oracle.toplink.workbench.addin">
+      <hash n="persistence-list">
+         <value n="jpa-version" v="1.0"/>
       </hash>
    </hash>
 </jpr:project>
