@@ -5,7 +5,7 @@
  </application>
  <managed-bean>
   <managed-bean-name>ejemploMB</managed-bean-name>
-  <managed-bean-class>mx.gob.nafinsa.siag.conciliaciones.controller.EjemploController</managed-bean-class>
+  <managed-bean-class>mx.unam.ssi.sgc.webapp.controller.EjemploController</managed-bean-class>
   <managed-bean-scope>session</managed-bean-scope>
   
 </managed-bean>

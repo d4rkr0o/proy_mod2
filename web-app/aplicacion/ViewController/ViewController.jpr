@@ -59,7 +59,7 @@
       <string v="oracle.toplink.workbench.addin/toplinkContentSet"/>
       <string v="oracle.weblogic.jdeveloper.migration.addin/weblogicMigrationContentSet"/>
    </list>
-   <value n="defaultPackage" v="mx.gob.nafinsa.view"/>
+   <value n="defaultPackage" v="mx.unam.ssi.view"/>
    <hash n="JspLibrary">
       <value n="jspVersion" v="1.2"/>
       <value n="name" v="ICEfaces Component Suite"/>
