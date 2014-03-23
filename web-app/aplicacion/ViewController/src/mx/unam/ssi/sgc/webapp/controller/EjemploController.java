@@ -57,4 +57,30 @@ public class EjemploController extends EjemploForm {
     public EjemploService getEjemploService() {
         return ejemploService;
     }
+
+//Ismael Hernandez Millares
+        public boolean validar(String usuario) {
+
+        Pattern patron = Pattern.compile("[A-Za-z_]?([A-Za-z0-9](\\.|\\_)?){1,22}");
+        Matcher m = patron.matcher(usuario);
+        
+        if (m.matches()) {
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    
+
+       public String sha1(String password) throws NoSuchAlgorithmException {
+        MessageDigest md = MessageDigest.getInstance("SHA1");
+        byte[] result = md.digest(password.getBytes());
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < result.length; i++) {
+            sb.append(Integer.toString((result[i] & 0xff) + 0x100, 16).substring(1));
+        }
+
+        return sb.toString();
+    }
 }
