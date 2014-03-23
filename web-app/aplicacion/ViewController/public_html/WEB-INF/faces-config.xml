@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="windows-1252"?>
-<faces-config xmlns="http://java.sun.com/xml/ns/javaee" version="2.1">
- <application>
-  <view-handler>com.icesoft.faces.facelets.D2DFaceletViewHandler</view-handler>
- </application>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                                  http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+              version="2.1">
+              
+
  <managed-bean>
   <managed-bean-name>ejemploMB</managed-bean-name>
   <managed-bean-class>mx.unam.ssi.sgc.webapp.controller.EjemploController</managed-bean-class>
@@ -11,7 +14,7 @@
 </managed-bean>
  <managed-bean>
   <managed-bean-name>renderManager</managed-bean-name>
-  <managed-bean-class>com.icesoft.faces.async.render.RenderManager</managed-bean-class>
+  <managed-bean-class>com.icesoft.faces.async.render.SessionRenderer</managed-bean-class>
   <managed-bean-scope>application</managed-bean-scope>
  </managed-bean>
  
@@ -22,4 +25,6 @@
         <to-view-id>/results.jspx</to-view-id>
     </navigation-case>
 </navigation-rule>
+
+
 </faces-config>

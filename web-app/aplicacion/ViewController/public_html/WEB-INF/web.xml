@@ -3,6 +3,7 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          version="2.5" xmlns="http://java.sun.com/xml/ns/javaee">
     <description>Arquitectura WEB-APP</description>
+    
     <context-param>
 	<param-name>contextConfigLocation</param-name>
 	<param-value>/WEB-INF/applicationContext*.xml</param-value>
@@ -13,15 +14,46 @@
           org.springframework.web.context.ContextLoaderListener
     </listener-class>
   </listener>
+
+    <!-- Faces Servlet -->
+    <context-param>
+        <param-name>javax.faces.application.CONFIG_FILES</param-name>
+        <param-value>/WEB-INF/faces-config.xml</param-value>
+    </context-param>
+    
+    <listener>
+        <listener-class>com.sun.faces.config.ConfigureListener</listener-class>
+    </listener>
+  
+    <servlet-mapping>
+        <servlet-name>Persistent Faces Servlet</servlet-name>
+        <url-pattern>*.jsf</url-pattern>
+    </servlet-mapping>
+ 
+    <servlet-mapping>
+        <servlet-name>Persistent Faces Servlet</servlet-name>
+        <url-pattern>*.jsf</url-pattern>
+    </servlet-mapping>
+
+ 
+    <servlet-mapping>
+        <servlet-name>Persistent Faces Servlet</servlet-name>
+        <url-pattern>*.jspx</url-pattern>
+    </servlet-mapping>
+    
+    <session-config>
+        <session-timeout>35</session-timeout>
+    </session-config>
     
     <context-param>
+        <param-name>javax.faces.DEFAULT_SUFFIX</param-name>
+        <param-value>.jspx</param-value>
+    </context-param> 
+   <!-- NUEVO ICE FACES-->
+    
+     <context-param>
         <param-name>com.icesoft.faces.debugDOMUpdate</param-name>
         <param-value>false</param-value>
-    </context-param>
- 
-    <context-param>
-        <param-name>javax.faces.STATE_SAVING_METHOD</param-name>
-        <param-value>server</param-value>
     </context-param>
    
     <context-param>
@@ -32,87 +64,51 @@
     <context-param>
         <param-name>com.icesoft.faces.synchronousUpdate</param-name>
         <param-value>true</param-value>
+        
     </context-param>
-     
-    <!-- Faces Servlet -->
+    <!-- Nuevos CONTEXT PARAM -->
     <context-param>
-        <param-name>javax.faces.application.CONFIG_FILES</param-name>
-        <param-value>/WEB-INF/faces-config.xml</param-value>
+        <param-name>javax.faces.FACELETS_SKIP_COMMENTS</param-name>
+        <param-value>true</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>javax.faces.VALIDATE_EMPTY_FIELDS</param-name>
+        <param-value>false</param-value>
     </context-param>
     
-    <listener>
-        <listener-class>com.sun.faces.config.ConfigureListener</listener-class>
-    </listener>
-    <servlet>
+    <!-- New web.xml Faces Servlet -->
+     <servlet>
         <servlet-name>Faces Servlet</servlet-name>
         <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
     </servlet>
- 
-    <servlet>
-        <servlet-name>Persistent Faces Servlet</servlet-name>
-        <servlet-class>com.icesoft.faces.webapp.xmlhttp.PersistentFacesServlet</servlet-class>
-        <load-on-startup> 1 </load-on-startup>
-    </servlet>
- 
-    <servlet>
-        <servlet-name>Blocking Servlet</servlet-name>
-        <servlet-class>com.icesoft.faces.webapp.xmlhttp.BlockingServlet</servlet-class>
-        <load-on-startup> 1 </load-on-startup>
-    </servlet>
- 
-    <!-- extension mapping -->
-    <servlet>
-        <servlet-name>uploadServlet</servlet-name>
-        <servlet-class>com.icesoft.faces.component.inputfile.FileUploadServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
+
     <servlet-mapping>
-        <servlet-name>Persistent Faces Servlet</servlet-name>
+        <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>*.jsf</url-pattern>
     </servlet-mapping>
- 
+
     <servlet-mapping>
-        <servlet-name>Persistent Faces Servlet</servlet-name>
-        <url-pattern>*.jsf</url-pattern>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/icefaces/*</url-pattern>
     </servlet-mapping>
- 
+    
+    <!-- RESOURCE SERVLET -->
+    <servlet>
+        <servlet-name>Resource Servlet</servlet-name>
+        <servlet-class>com.icesoft.faces.webapp.CompatResourceServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
     <servlet-mapping>
-        <servlet-name>Persistent Faces Servlet</servlet-name>
-        <url-pattern>*.iface</url-pattern>
-    </servlet-mapping>
- 
-    <servlet-mapping>
-        <servlet-name>Persistent Faces Servlet</servlet-name>
+        <servlet-name>Resource Servlet</servlet-name>
         <url-pattern>/xmlhttp/*</url-pattern>
     </servlet-mapping>
- 
-    <servlet-mapping>
-        <servlet-name>Blocking Servlet</servlet-name>
-        <url-pattern>/block/*</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>Persistent Faces Servlet</servlet-name>
-        <url-pattern>*.jspx</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>Persistent Faces Servlet</servlet-name>
-        <url-pattern>/faces/*</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>uploadServlet</servlet-name>
-        <url-pattern>/uploadHtml</url-pattern>
-    </servlet-mapping>
-    <session-config>
-        <session-timeout>35</session-timeout>
-    </session-config>
+    <!-- FIN NUEVO -->
+    
    <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>/index.jsp</welcome-file>
    </welcome-file-list>
-<context-param>
- <param-name>javax.faces.DEFAULT_SUFFIX</param-name>
- <param-value>.jspx</param-value>
-</context-param>
-
+   
 
 </web-app>

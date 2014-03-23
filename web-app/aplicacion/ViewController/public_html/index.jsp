@@ -7,6 +7,6 @@
     <title>index</title>
   </head>
   <body>
-  <jsp:forward page="/index.iface"/>
+  <jsp:forward page="/index.jspx"/>
   </body>
 </html>

@@ -164,22 +164,6 @@
    <hash n="oracle.jdevimpl.config.JProjectLibraries">
       <list n="exportedReferences">
          <hash>
-            <value n="id" v="Commons Beanutils 1.6"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Commons Digester 1.8"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Commons Logging 1.0.4"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Commons Collections 3.1"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
             <value n="id" v="JSP Runtime"/>
             <value n="isJDK" v="false"/>
          </hash>
@@ -248,10 +232,6 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="Krysalis-jCharts-1.0.0-alpha-1.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
             <value n="id" v="Jhighlight-1.0.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
@@ -273,6 +253,38 @@
          </hash>
          <hash>
             <value n="id" v="Java EE"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-beanutils.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-collections.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-digester.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-logging.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="El-api.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jxl.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Krysalis-jCharts-1.0.0-alpha-1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Javax.faces.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
@@ -388,15 +400,6 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/compat/krysalis-jCharts-1.0.0-alpha-1.jar" jar-entry=""/>
-               </list>
-               <value n="deployedByDefault" v="true"/>
-               <value n="description" v="Krysalis-jCharts-1.0.0-alpha-1.jar"/>
-               <value n="id" v="Krysalis-jCharts-1.0.0-alpha-1.jar"/>
-               <value n="locked" v="true"/>
-            </hash>
-            <hash>
-               <list n="classPath">
                   <url path="public_html/WEB-INF/lib/jhighlight-1.0.jar" jar-entry=""/>
                </list>
                <value n="deployedByDefault" v="true"/>
@@ -436,25 +439,81 @@
                <value n="description" v="icefaces-compat.jar"/>
                <value n="id" v="icefaces-compat.jar"/>
             </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/compat/commons-beanutils.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Commons-beanutils.jar"/>
+               <value n="id" v="Commons-beanutils.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/compat/commons-collections.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Commons-collections.jar"/>
+               <value n="id" v="Commons-collections.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/compat/commons-digester.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Commons-digester.jar"/>
+               <value n="id" v="Commons-digester.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/compat/commons-logging.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Commons-logging.jar"/>
+               <value n="id" v="Commons-logging.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/compat/el-api.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="El-api.jar"/>
+               <value n="id" v="El-api.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/compat/jxl.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Jxl.jar"/>
+               <value n="id" v="Jxl.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/compat/krysalis-jCharts-1.0.0-alpha-1.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Krysalis-jCharts-1.0.0-alpha-1.jar"/>
+               <value n="id" v="Krysalis-jCharts-1.0.0-alpha-1.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="public_html/WEB-INF/lib/ICEfaces-3.3.0-bin/icefaces/lib/mojarra/javax.faces.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="Javax.faces.jar"/>
+               <value n="id" v="Javax.faces.jar"/>
+               <value n="locked" v="true"/>
+            </hash>
          </list>
       </hash>
       <list n="libraryReferences">
-         <hash>
-            <value n="id" v="Commons Beanutils 1.6"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Commons Digester 1.8"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Commons Logging 1.0.4"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Commons Collections 3.1"/>
-            <value n="isJDK" v="false"/>
-         </hash>
          <hash>
             <value n="id" v="JSP Runtime"/>
             <value n="isJDK" v="false"/>
@@ -524,10 +583,6 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="Krysalis-jCharts-1.0.0-alpha-1.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
             <value n="id" v="Jhighlight-1.0.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
@@ -549,6 +604,38 @@
          </hash>
          <hash>
             <value n="id" v="Java EE"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-beanutils.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-collections.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-digester.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Commons-logging.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="El-api.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Jxl.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Krysalis-jCharts-1.0.0-alpha-1.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Javax.faces.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
