@@ -60,7 +60,7 @@ public class EjemploController extends EjemploForm {
 
 //Ismael Hernandez Millares
         public boolean validar(String usuario) {
-
+        /*
         Pattern patron = Pattern.compile("[A-Za-z_]?([A-Za-z0-9](\\.|\\_)?){1,22}");
         Matcher m = patron.matcher(usuario);
         
@@ -70,9 +70,11 @@ public class EjemploController extends EjemploForm {
         else{
             return false;
         }
+        */
+            return false;
     }
     
-
+    /*
        public String sha1(String password) throws NoSuchAlgorithmException {
         MessageDigest md = MessageDigest.getInstance("SHA1");
         byte[] result = md.digest(password.getBytes());
@@ -83,4 +85,5 @@ public class EjemploController extends EjemploForm {
 
         return sb.toString();
     }
+    */
 }

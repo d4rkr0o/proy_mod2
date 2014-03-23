@@ -13,27 +13,25 @@
     <listener-class>
           org.springframework.web.context.ContextLoaderListener
     </listener-class>
-  </listener>
-
-    <!-- Faces Servlet -->
-    <context-param>
-        <param-name>javax.faces.application.CONFIG_FILES</param-name>
-        <param-value>/WEB-INF/faces-config.xml</param-value>
-    </context-param>
+    </listener>
     
     <listener>
         <listener-class>com.sun.faces.config.ConfigureListener</listener-class>
     </listener>
-
+    <context-param>
+        <param-name>javax.faces.application.CONFIG_FILES</param-name>
+        <param-value>/WEB-INF/faces-config.xml</param-value>
+    </context-param>
     <session-config>
         <session-timeout>35</session-timeout>
     </session-config>
+    
+   <!-- NUEVO ICE FACES-->
     
     <context-param>
         <param-name>javax.faces.DEFAULT_SUFFIX</param-name>
         <param-value>.jspx</param-value>
     </context-param> 
-   <!-- NUEVO ICE FACES-->
     
      <context-param>
         <param-name>com.icesoft.faces.debugDOMUpdate</param-name>
@@ -71,7 +69,17 @@
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>*.jsf</url-pattern>
     </servlet-mapping>
-
+    
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>*.jsp</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>*.jspx</url-pattern>
+    </servlet-mapping>
+    
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/icefaces/*</url-pattern>
@@ -93,6 +101,5 @@
    <welcome-file-list>
         <welcome-file>/index.jsp</welcome-file>
    </welcome-file-list>
-
 
 </web-app>

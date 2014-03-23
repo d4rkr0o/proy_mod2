@@ -256,14 +256,6 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="JSTL 1.2"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="JSTL 1.2 Tags"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
             <value n="id" v="El-api-2.2.1-b03.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
@@ -607,14 +599,6 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="JSTL 1.2"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="JSTL 1.2 Tags"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
             <value n="id" v="El-api-2.2.1-b03.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
@@ -726,13 +710,18 @@
    <hash n="oracle.jdevimpl.webapp.jsp.JspVeProjectSettings">
       <list n="servlet_listeners">
          <string v="com.sun.faces.config.ConfigureListener"/>
-      </list>
-      <list n="servlet_listeners_unselected">
+         <string v="org.icepush.util.ExtensionRegistry"/>
+         <string v="org.icepush.servlet.MainServlet#ExtensionRegistration"/>
+         <string v="org.icepush.EmailNotificationProvider#AutoRegister"/>
+         <string v="org.icefaces.impl.push.servlet.ICEpushResourceHandlerLifecycle"/>
+         <string v="org.icefaces.impl.application.SessionExpiredListener"/>
          <string v="org.springframework.web.context.ContextLoaderListener"/>
          <string v="com.icesoft.faces.util.event.servlet.ContextEventRepeater"/>
       </list>
+      <list n="servlet_listeners_unselected"/>
       <list n="servlets">
          <string v="Faces Servlet"/>
+         <string v="Resource Servlet"/>
       </list>
    </hash>
    <hash n="oracle.jdevimpl.webapp.jsp.libraries.model.ProjectTagLibraries">
@@ -861,6 +850,7 @@
    <hash n="oracle.toplink.workbench.addin">
       <hash n="persistence-list">
          <value n="jpa-version" v="1.0"/>
+         <value n="metamodel-generation-directory" v=""/>
       </hash>
    </hash>
 </jpr:project>
