@@ -24,23 +24,7 @@
     <listener>
         <listener-class>com.sun.faces.config.ConfigureListener</listener-class>
     </listener>
-  
-    <servlet-mapping>
-        <servlet-name>Persistent Faces Servlet</servlet-name>
-        <url-pattern>*.jsf</url-pattern>
-    </servlet-mapping>
- 
-    <servlet-mapping>
-        <servlet-name>Persistent Faces Servlet</servlet-name>
-        <url-pattern>*.jsf</url-pattern>
-    </servlet-mapping>
 
- 
-    <servlet-mapping>
-        <servlet-name>Persistent Faces Servlet</servlet-name>
-        <url-pattern>*.jspx</url-pattern>
-    </servlet-mapping>
-    
     <session-config>
         <session-timeout>35</session-timeout>
     </session-config>
@@ -109,6 +93,6 @@
    <welcome-file-list>
         <welcome-file>/index.jsp</welcome-file>
    </welcome-file-list>
-   
+
 
 </web-app>

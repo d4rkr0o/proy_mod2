@@ -5,6 +5,9 @@
       <value n="deploy-timeout" v="0"/>
       <value n="runtime-application-name" v="aplicacion"/>
    </hash>
+   <hash n="adrs-workspace-weblogic-properties">
+      <value n="hot-class-reload" v="ide-default"/>
+   </hash>
    <hash n="appWebServicePolicy">
       <value n="location"/>
       <value n="LOCATION_TYPE" v="policy.config.PolicyOptions.LocationType.FILE_STORE"/>
