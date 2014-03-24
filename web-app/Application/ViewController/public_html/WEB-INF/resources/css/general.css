@@ -2,8 +2,6 @@
     background: #ea8d26;
     color:white;
     border-radius:4px; 
-    moz-border-radius:4px; /* Firefox */ 
-    webkit-border-radius:4px; /* Safari y Chrome */ 
 }
 
 .page{
@@ -14,8 +12,6 @@
 
 .borde{ 
     border-radius:10px; 
-    moz-border-radius:10px; /* Firefox */ 
-    webkit-border-radius:10px; /* Safari y Chrome */ 
     border:1px solid #ea8d26;
     background:white;
     width:99%;

@@ -3,62 +3,194 @@
           xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <f:view>
-        <af:document title="untitled1.jspx" id="d1">
+        <af:document title="welcome.jspx" id="d1" theme="medium">
             <af:form id="f1">
                 <af:pageTemplate viewId="/WEB-INF/templates/template.jspx" id="pt1">
                     <f:facet name="contenido">
-                        <af:panelDashboard id="pd1" dimensionsFrom="auto">
+                        <af:panelDashboard id="pd1" dimensionsFrom="auto" rowHeight="150px">
                           
-                            <af:panelBox text="Noticias Nacionales" id="pb1" showHeader="always"
-                                         type="flow" ramp="highlight" showDisclosure="true">
+                            <af:panelBox text="Noticias Nacionales" id="pb1" 
+                                         showHeader="always"
+                                         type="flow" >
                                 <f:facet name="toolbar"/>
                                 <af:componentDragSource/>
+                                <af:panelGridLayout id="pgl1" dimensionsFrom="parent">
+                                    <af:gridRow marginTop="5px" height="auto" id="gr1">
+                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc1"
+                                                     halign="center" valign="middle">
+                                            <af:activeImage id="ai1"/>
+                                        </af:gridCell>
+                                    </af:gridRow>
+                                    <af:gridRow marginTop="5px" height="20px" marginBottom="5px" id="gr2">
+                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
+                                            <af:activeOutputText value="Descripcion" id="aot1"/>
+                                        </af:gridCell>
+                                    </af:gridRow>
+                                </af:panelGridLayout>
                             </af:panelBox>
                             
-                            <af:panelBox text="Deportes" id="pb2" showHeader="always" background="medium" type="flow">
+                            <af:panelBox text="Tecnologia" id="pb3"    
+                                         showHeader="always"
+                                         type="flow" background="medium">
                                 <f:facet name="toolbar"/>
                                 <af:componentDragSource/>
+                                <af:panelGridLayout id="pgl8" dimensionsFrom="parent">
+                                    <af:gridRow marginTop="5px" height="auto" id="gr15">
+                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc15"
+                                                     halign="center" valign="middle">
+                                            <af:activeImage id="ai8"/>
+                                        </af:gridCell>
+                                    </af:gridRow>
+                                    <af:gridRow marginTop="5px" height="20px" marginBottom="5px" id="gr16">
+                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc16">
+                                            <af:activeOutputText value="Descripcion" id="aot8"/>
+                                        </af:gridCell>
+                                    </af:gridRow>
+                                </af:panelGridLayout>
                             </af:panelBox>
                             
-                            <af:panelBox text="Tecnologia" id="pb3">
+                            <af:panelBox text="Internacionales" id="pb4"
+                                         showHeader="always"
+                                         type="flow" background="medium">
                                 <f:facet name="toolbar"/>
                                 <af:componentDragSource/>
+                                <af:panelGridLayout id="pgl3" dimensionsFrom="parent">
+                                    <af:gridRow marginTop="5px" height="auto" id="gr5">
+                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5"
+                                                     halign="center" valign="middle">
+                                            <af:activeImage id="ai3"/>
+                                        </af:gridCell>
+                                    </af:gridRow>
+                                    <af:gridRow marginTop="5px" height="20px" marginBottom="5px" id="gr6">
+                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
+                                            <af:activeOutputText value="Descripcion" id="aot3"/>
+                                        </af:gridCell>
+                                    </af:gridRow>
+                                </af:panelGridLayout>
                             </af:panelBox>
                             
-                            <af:panelBox text="Internacionales" id="pb4">
+                            <af:panelBox text="Entretenimiento" id="pb5"
+                                         showHeader="always"
+                                         type="flow" background="dark">
                                 <f:facet name="toolbar"/>
                                 <af:componentDragSource/>
+                                <af:panelGridLayout id="pgl4" dimensionsFrom="parent">
+                                    <af:gridRow marginTop="5px" height="auto" id="gr7">
+                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7"
+                                                     halign="center" valign="middle">
+                                            <af:activeImage id="ai4"/>
+                                        </af:gridCell>
+                                    </af:gridRow>
+                                    <af:gridRow marginTop="5px" height="20px" marginBottom="5px" id="gr8">
+                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc8">
+                                            <af:activeOutputText value="Descripcion" id="aot4"/>
+                                        </af:gridCell>
+                                    </af:gridRow>
+                                </af:panelGridLayout>
                             </af:panelBox>
                             
-                            <af:panelBox text="Entretenimiento" id="pb5" background="medium" type="flow">
+                            <af:panelBox text="Salud" id="pb6"
+                                         showHeader="always"
+                                         type="flow" >
                                 <f:facet name="toolbar"/>
                                 <af:componentDragSource/>
+                                <af:panelGridLayout id="pgl5" dimensionsFrom="parent">
+                                    <af:gridRow marginTop="5px" height="auto" id="gr9">
+                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc9"
+                                                     halign="center" valign="middle">
+                                            <af:activeImage id="ai5"/>
+                                        </af:gridCell>
+                                    </af:gridRow>
+                                    <af:gridRow marginTop="5px" height="20px" marginBottom="5px" id="gr10">
+                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc10">
+                                            <af:activeOutputText value="Descripcion" id="aot5"/>
+                                        </af:gridCell>
+                                    </af:gridRow>
+                                </af:panelGridLayout>
                             </af:panelBox>
                             
-                            <af:panelBox text="Salud" id="pb6">
+                            <af:panelBox text="Seguridad de la Informacion" id="pb7"
+                                         showHeader="always"
+                                         type="flow" background="medium">
                                 <f:facet name="toolbar"/>
                                 <af:componentDragSource/>
+                                <af:panelGridLayout id="pgl6" dimensionsFrom="parent">
+                                    <af:gridRow marginTop="5px" height="auto" id="gr11">
+                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc11"
+                                                     halign="center" valign="middle">
+                                            <af:activeImage id="ai6"/>
+                                        </af:gridCell>
+                                    </af:gridRow>
+                                    <af:gridRow marginTop="5px" height="20px" marginBottom="5px" id="gr12">
+                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc12">
+                                            <af:activeOutputText value="Descripcion" id="aot6"/>
+                                        </af:gridCell>
+                                    </af:gridRow>
+                                </af:panelGridLayout>
                             </af:panelBox>
                             
-                            <af:panelBox text="Seguridad de la Informacion" id="pb7">
+                            <af:panelBox text="Programacion" id="pb8"
+                                         showHeader="always"
+                                         type="flow" >
                                 <f:facet name="toolbar"/>
                                 <af:componentDragSource/>
+                                <af:panelGridLayout id="pgl7" dimensionsFrom="parent">
+                                    <af:gridRow marginTop="5px" height="auto" id="gr13">
+                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc13"
+                                                     halign="center" valign="middle">
+                                            <af:activeImage id="ai7"/>
+                                        </af:gridCell>
+                                    </af:gridRow>
+                                    <af:gridRow marginTop="5px" height="20px" marginBottom="5px" id="gr14">
+                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc14">
+                                            <af:activeOutputText value="Descripcion" id="aot7"/>
+                                        </af:gridCell>
+                                    </af:gridRow>
+                                </af:panelGridLayout>
                             </af:panelBox>
                             
-                            <af:panelBox text="Programacion" id="pb8">
+                            <af:panelBox text="Otros" id="pb9"
+                                         showHeader="always"
+                                         type="flow" background="medium">
+                                <af:componentDragSource/>
+                                <f:facet name="toolbar"/>
+                                <af:panelGridLayout id="pgl2" dimensionsFrom="parent">
+                                    <af:gridRow marginTop="5px" height="auto" id="gr3">
+                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc3"
+                                                     halign="center" valign="middle">
+                                            <af:activeImage id="ai2"/>
+                                        </af:gridCell>
+                                    </af:gridRow>
+                                    <af:gridRow marginTop="5px" height="20px" marginBottom="5px" id="gr4">
+                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4">
+                                            <af:activeOutputText value="Descripcion" id="aot2"/>
+                                        </af:gridCell>
+                                    </af:gridRow>
+                                </af:panelGridLayout>
+                            </af:panelBox>
+                            <af:panelBox text="Matematicas" id="pb2" showHeader="always" type="flow"
+                                         background="medium">
                                 <f:facet name="toolbar"/>
                                 <af:componentDragSource/>
+                                <af:panelGridLayout id="pgl9" dimensionsFrom="parent">
+                                    <af:gridRow marginTop="5px" height="auto" id="gr17">
+                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc17"
+                                                     halign="center" valign="middle">
+                                            <af:activeImage id="ai9"/>
+                                        </af:gridCell>
+                                    </af:gridRow>
+                                    <af:gridRow marginTop="5px" height="20px" marginBottom="5px" id="gr18">
+                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc18">
+                                            <af:activeOutputText value="Descripcion" id="aot9"/>
+                                        </af:gridCell>
+                                    </af:gridRow>
+                                </af:panelGridLayout>
                             </af:panelBox>
-                            
-                            <af:panelBox text="Otros" id="pb9">
-                                <af:componentDragSource/>
-                                <f:facet name="toolbar"/>
-                            </af:panelBox>
-                            
                         </af:panelDashboard>
                     </f:facet>
                     <f:facet name="titulo">
                         <af:outputText value="Titulo" id="ot1"/>
+                        <af:icon name="required" id="i1"/>
                     </f:facet>
                 </af:pageTemplate>
             </af:form>
