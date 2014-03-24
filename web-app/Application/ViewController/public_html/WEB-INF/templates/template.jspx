@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <af:pageTemplateDef var="attrs" definition="private">
+        <af:xmlContent>
+            <component xmlns="http://xmlns.oracle.com/adf/faces/rich/component">
+                <description>Template Basico</description>
+                <display-name>template</display-name>
+                <facet>
+                    <facet-name>
+                        contenido
+                    </facet-name>
+                </facet>
+                <facet>
+                    <facet-name>
+                        titulo
+                    </facet-name>
+                </facet>
+            </component>
+        </af:xmlContent>
+        <af:panelGridLayout id="pt_pgl1">
+            <af:gridRow height="100px" id="pt_gr1">
+                <af:gridCell width="100%" halign="stretch" valign="stretch" id="pt_gc2">
+                    <!-- Header -->
+                    <af:panelGridLayout id="pt_pgl2">
+                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="pt_gr3">
+                            <af:gridCell marginStart="5px" width="220px" id="pt_gc3">
+                                <af:image source="/WEB-INF/resources/images/logo_unam.gif" shortDesc="Logo" id="pt_i1"/>
+                            </af:gridCell>
+                            <af:gridCell marginStart="5px" width="auto" marginEnd="5px" id="pt_gc4" halign="center"
+                                         valign="middle">
+                                <af:activeOutputText value="Sistema de Gestion de Contenido" id="pt_aot1"
+                                                     noWrap="true"
+                                                     inlineStyle="color:Black; font-size:large; font-style:normal; font-variant:normal; text-align:center;"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                    </af:panelGridLayout>
+                </af:gridCell>
+            </af:gridRow>
+            <af:gridRow height="100%" id="pt_gr2">
+                <af:gridCell width="100%" halign="stretch" valign="stretch" id="pt_gc1">
+                    <af:panelSplitter orientation="vertical" positionedFromEnd="true" splitterPosition="50" id="pt_ps1">
+                        <f:facet name="first">
+                            <!-- Content -->
+                            <af:decorativeBox id="pt_db1">
+                                <f:facet name="center">
+                                    <af:facetRef facetName="contenido"/>
+                                </f:facet>
+                                <f:facet name="top">
+                                    <af:facetRef facetName="titulo"/>
+                                </f:facet>
+                            </af:decorativeBox>
+                        </f:facet>
+                        <f:facet name="second">
+                            <!-- Footer -->
+                            <af:panelGridLayout id="pt_pgl3">
+                                <af:gridRow marginTop="5px" height="auto" id="pt_gr4">
+                                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="pt_gc5"/>
+                                </af:gridRow>
+                                <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="pt_gr5">
+                                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="pt_gc6"
+                                                 valign="middle" halign="center" inlineStyle="font-style:oblique;">
+                                        Todos los Derechos Reservados Equipo Alpha. Mexico ,DF. 2014
+                                    </af:gridCell>
+                                </af:gridRow>
+                            </af:panelGridLayout>
+                        </f:facet>
+                    </af:panelSplitter>
+                </af:gridCell>
+            </af:gridRow>
+        </af:panelGridLayout>
+    </af:pageTemplateDef>
+</jsp:root>

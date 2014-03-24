@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="untitled1.jspx" id="d1">
+            <af:form id="f1">
+                <af:pageTemplate viewId="/WEB-INF/templates/template.jspx" id="pt1">
+                    <f:facet name="contenido">
+                        <af:panelDashboard id="pd1" dimensionsFrom="auto">
+                          
+                            <af:panelBox text="Noticias Nacionales" id="pb1" showHeader="always"
+                                         type="flow" ramp="highlight" showDisclosure="true">
+                                <f:facet name="toolbar"/>
+                                <af:componentDragSource/>
+                            </af:panelBox>
+                            
+                            <af:panelBox text="Deportes" id="pb2" showHeader="always" background="medium" type="flow">
+                                <f:facet name="toolbar"/>
+                                <af:componentDragSource/>
+                            </af:panelBox>
+                            
+                            <af:panelBox text="Tecnologia" id="pb3">
+                                <f:facet name="toolbar"/>
+                                <af:componentDragSource/>
+                            </af:panelBox>
+                            
+                            <af:panelBox text="Internacionales" id="pb4">
+                                <f:facet name="toolbar"/>
+                                <af:componentDragSource/>
+                            </af:panelBox>
+                            
+                            <af:panelBox text="Entretenimiento" id="pb5" background="medium" type="flow">
+                                <f:facet name="toolbar"/>
+                                <af:componentDragSource/>
+                            </af:panelBox>
+                            
+                            <af:panelBox text="Salud" id="pb6">
+                                <f:facet name="toolbar"/>
+                                <af:componentDragSource/>
+                            </af:panelBox>
+                            
+                            <af:panelBox text="Seguridad de la Informacion" id="pb7">
+                                <f:facet name="toolbar"/>
+                                <af:componentDragSource/>
+                            </af:panelBox>
+                            
+                            <af:panelBox text="Programacion" id="pb8">
+                                <f:facet name="toolbar"/>
+                                <af:componentDragSource/>
+                            </af:panelBox>
+                            
+                            <af:panelBox text="Otros" id="pb9">
+                                <af:componentDragSource/>
+                                <f:facet name="toolbar"/>
+                            </af:panelBox>
+                            
+                        </af:panelDashboard>
+                    </f:facet>
+                    <f:facet name="titulo">
+                        <af:outputText value="Titulo" id="ot1"/>
+                    </f:facet>
+                </af:pageTemplate>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>
