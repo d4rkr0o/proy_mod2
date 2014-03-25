@@ -1,4 +1,5 @@
 <?php
+include_once('Articulo.php');
 /**
   * Implements hook_menu().
   */
@@ -8,34 +9,27 @@ function mymodule_menu() {
     'title' => 'JSON',
     'description' => 'JSON web service',
     'page callback' => 'ws_json',
-    'access callback' => TRUE
+    'access callback' => TRUE,
+    'type'=> MENU_CALLBACK,
   );
   return $items;
 }
 
-function retrieveAll(){
-    $elementos=array();
-    for ($j=2;$j<11;$j++){
-      $node= node_load($j);
-      $arregloFinal=array('ID Nodo'=> $nodo->nid , 'Titulo'=>$nodo->title);
-      $elementos[''.$j]=$arregloFinal;
-
-    }
-
-$arr=array("Posts"=>$elementos);
- drupal_json_output($arr);
-drupal_exit();
-
-  }
-
 function ws_json(){
-  $response = array();
-  if (!empty($_POST["index"]) && empty($_POST["idNode"])) {
-    retrieveAll();
+ 	$article=new Articulo();
+   if (empty($_POST['idNode']) && empty($_POST['comment']))
+  	{
+    $article->getImages();
+	}	 
+
+ 
+   if (!empty($_POST['idNode']) && empty($_POST['comment'])) {
+	$nodoId=(int)$_POST['idNode'];
+	$article->retrieveAllContent($nodoId);
+	//echo 'Hola mundo';
   }
-
+  if (!empty($_POST['idNode']) && !empty($_POST['comment'])){
+	
+	 $article->postComment($_POST['idNode'],$_POST['comment']);
+	}
 }
-
-
-
-?>

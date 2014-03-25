@@ -1,7 +1,7 @@
 ;$Id$
    name = JSON Response
    description = Module for handling JSON Responses.
-   package = Drupal 7 JSON Development
+   package = JSON Development
    core = 7.x
    files[] = mymodule.module
    ;dependencies[] = autoload
