@@ -5,10 +5,10 @@ import java.util.List;
 import mx.unam.ssi.sgc.webapp.model.Ejemplo;
 import mx.unam.ssi.sgc.webapp.utils.AbstractMB;
 
-public class EjemploForm extends AbstractMB{
+public class TemplateForm extends AbstractMB{
     protected List<Ejemplo> ejemplos;
     protected Ejemplo ejemplo;
-    public EjemploForm() {
+    public TemplateForm() {
      ejemplo=new Ejemplo();
     }
     

@@ -37,8 +37,9 @@
                             <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="pt_gc7" halign="end"
                                          valign="top">
                                 <af:toolbar id="pt_t1">
-                                    <af:link text="Sign Up" id="pt_l1"/>
-                                    <af:button text="Log In" id="pt_b1"/>
+                                    <af:link text="Sign Up" id="signup"/>
+                                    <af:button text="Log In" id="login" selected="false" inlineStyle="color:Black;"
+                                               action="#{templateMB.logIn}"/>
                                 </af:toolbar>
                             </af:gridCell>
                         </af:gridRow>
@@ -57,10 +58,18 @@
                                     <af:facetRef facetName="contenido"/>
                                 </f:facet>
                                 <f:facet name="top">
-                                    <af:group id="pt_g1">
-                                         <af:icon name="changed" id="pt_i2"/>
-                                         <af:facetRef facetName="titulo"/>
-                                    </af:group>
+                                    <af:panelGridLayout id="pt_pgl4">
+                                        <af:gridRow marginTop="5px" height="40px" marginBottom="5px" id="pt_gr6">
+                                            <af:gridCell marginStart="5px" width="auto" id="pt_gc8" halign="center"
+                                                         valign="middle">
+                                                <af:icon name="changed" id="pt_i2"/>
+                                            </af:gridCell>
+                                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="pt_gc9"
+                                                         halign="start" valign="middle">
+                                                <af:facetRef facetName="titulo"/>
+                                            </af:gridCell>
+                                        </af:gridRow>
+                                    </af:panelGridLayout>
                                 </f:facet>
                             </af:decorativeBox>
                         </f:facet>

@@ -189,7 +189,8 @@
                         </af:panelDashboard>
                     </f:facet>
                     <f:facet name="titulo">
-                        <af:outputText value="Titulo" id="ot1"/>
+                        <af:outputText value="Contenido" id="ot1"
+                                       inlineStyle="color:Orange; font-size:large; font-style:normal; font-variant:normal; text-align:center;"/>
                         <af:icon name="required" id="i1"/>
                     </f:facet>
                 </af:pageTemplate>

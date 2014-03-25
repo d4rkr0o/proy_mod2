@@ -1,23 +1,19 @@
 package mx.unam.ssi.sgc.webapp.controller;
 
 import java.util.ArrayList;
-
 import java.util.List;
-
 import javax.faces.context.FacesContext;
-
 import mx.unam.ssi.sgc.webapp.model.Ejemplo;
 import mx.unam.ssi.sgc.webapp.service.EjemploService;
-
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.jsf.FacesContextUtils;
 
 
-public class EjemploController extends EjemploForm {
+public class TemplateController extends TemplateForm {
     private EjemploService ejemploService;
 
 
-    public EjemploController() {
+    public TemplateController() {
         ejemplos = new ArrayList<Ejemplo>();
         ejemplos.add(new Ejemplo(1, "asas"));
 
@@ -57,33 +53,13 @@ public class EjemploController extends EjemploForm {
     public EjemploService getEjemploService() {
         return ejemploService;
     }
+ 
 
-//Ismael Hernandez Millares
-        public boolean validar(String usuario) {
-        /*
-        Pattern patron = Pattern.compile("[A-Za-z_]?([A-Za-z0-9](\\.|\\_)?){1,22}");
-        Matcher m = patron.matcher(usuario);
-        
-        if (m.matches()) {
-            return true;
-        }
-        else{
-            return false;
-        }
-        */
-            return false;
+    /**
+     * @return
+     */
+    public String logIn() {
+        // Add event code here...
+        return "login";
     }
-    
-    /*
-       public String sha1(String password) throws NoSuchAlgorithmException {
-        MessageDigest md = MessageDigest.getInstance("SHA1");
-        byte[] result = md.digest(password.getBytes());
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < result.length; i++) {
-            sb.append(Integer.toString((result[i] & 0xff) + 0x100, 16).substring(1));
-        }
-
-        return sb.toString();
-    }
-    */
 }

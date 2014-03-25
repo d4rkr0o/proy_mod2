@@ -3,4 +3,19 @@
   <application>
     <default-render-kit-id>oracle.adf.rich</default-render-kit-id>
   </application>
+  <managed-bean>
+    <managed-bean-name>templateMB</managed-bean-name>
+    <managed-bean-class>mx.unam.ssi.sgc.webapp.controller.TemplateController</managed-bean-class>
+    <managed-bean-scope>application</managed-bean-scope>
+  </managed-bean>
+  
+  <navigation-rule>
+    <from-view-id>/welcome.jspx</from-view-id>
+    <navigation-case>
+      <description>Evento cuando se debe loggear</description>
+      <from-outcome>login</from-outcome>
+      <to-view-id>/login/login.jspx</to-view-id>
+    </navigation-case>
+  </navigation-rule>
+  
 </faces-config>
