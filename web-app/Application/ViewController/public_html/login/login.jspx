@@ -6,7 +6,47 @@
         <af:document title="login.jspx" id="d1">
             <af:form id="f1">
                 <af:pageTemplate viewId="/resources/templates/template.jspx" id="pt1">
-                    <f:facet name="contenido"/>
+                    <f:facet name="contenido">
+                        <af:panelBorderLayout id="pbl1">
+                            <f:facet name="start"/>
+                            <f:facet name="bottom"/>
+                            <f:facet name="end"/>
+                            <f:facet name="top"/>
+                            <af:panelBox text="Sign In" id="pb1" inlineStyle="height:199px;" background="medium"
+                                         type="stretch">
+                                <f:facet name="toolbar"/>
+                                <af:panelGridLayout id="pgl1">
+                                    <af:gridRow marginTop="5px" height="auto" id="gr1">
+                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc1">
+                                            <af:outputText value="User" id="ot3"/>
+                                        </af:gridCell>
+                                    </af:gridRow>
+                                    <af:gridRow marginTop="5px" height="auto" id="gr2">
+                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
+                                            <af:inputText id="it1"/>
+                                        </af:gridCell>
+                                    </af:gridRow>
+                                    <af:gridRow marginTop="5px" height="auto" id="gr3">
+                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc3">
+                                            <af:outputText value="Password" id="ot2"/>
+                                        </af:gridCell>
+                                    </af:gridRow>
+                                    <af:gridRow marginTop="5px" height="auto" id="gr4">
+                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4">
+                                            <af:inputText id="it2"/>
+                                        </af:gridCell>
+                                    </af:gridRow>
+                                    <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr5">
+                                        <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
+                                            <af:button text="Sign In" id="b1"/>
+                                        </af:gridCell>
+                                    </af:gridRow>
+                                </af:panelGridLayout>
+                            </af:panelBox>
+                    
+                           
+                        </af:panelBorderLayout>
+                    </f:facet>
                     <f:facet name="titulo">
                            <af:outputText value="Login" id="ot1"
                                        inlineStyle="color:Orange; font-size:large; font-style:normal; font-variant:normal; text-align:center;"/>
