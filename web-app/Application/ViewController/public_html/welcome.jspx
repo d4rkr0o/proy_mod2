@@ -5,7 +5,7 @@
     <f:view>
         <af:document title="welcome.jspx" id="d1" theme="medium">
             <af:form id="f1">
-                <af:pageTemplate viewId="/WEB-INF/templates/template.jspx" id="pt1">
+                <af:pageTemplate viewId="/resources/templates/template.jspx" id="pt1">
                     <f:facet name="contenido">
                         <af:panelDashboard id="pd1" dimensionsFrom="auto" rowHeight="150px">
                           
@@ -31,7 +31,7 @@
                             
                             <af:panelBox text="Tecnologia" id="pb3"    
                                          showHeader="always"
-                                         type="flow" background="medium">
+                                         type="flow" background="dark">
                                 <f:facet name="toolbar"/>
                                 <af:componentDragSource/>
                                 <af:panelGridLayout id="pgl8" dimensionsFrom="parent">
@@ -111,7 +111,7 @@
                             
                             <af:panelBox text="Seguridad de la Informacion" id="pb7"
                                          showHeader="always"
-                                         type="flow" background="medium">
+                                         type="flow" background="dark">
                                 <f:facet name="toolbar"/>
                                 <af:componentDragSource/>
                                 <af:panelGridLayout id="pgl6" dimensionsFrom="parent">
@@ -151,7 +151,7 @@
                             
                             <af:panelBox text="Otros" id="pb9"
                                          showHeader="always"
-                                         type="flow" background="medium">
+                                         type="flow" background="dark">
                                 <af:componentDragSource/>
                                 <f:facet name="toolbar"/>
                                 <af:panelGridLayout id="pgl2" dimensionsFrom="parent">

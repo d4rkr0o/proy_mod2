@@ -20,33 +20,38 @@
             </component>
         </af:xmlContent>
         <af:panelGridLayout id="pt_pgl1" dimensionsFrom="parent">
+        
             <af:gridRow height="100px" id="pt_gr1">
+                <!-- Header -->
                 <af:gridCell halign="stretch" valign="stretch" id="pt_gc2"
-                             inlineStyle="border-bottom-right-radius:1px 1px; border-color:#212121; border-radius:5px 5px 5px 5px / 5px 5px 5px 5px ; border-bottom-color:WindowText; border-bottom-style:groove; background-color:transparent;"
-                             columnSpan="1">
-                    <!-- Header -->
-                    
-                    <af:panelGridLayout id="pt_pgl2" dimensionsFrom="auto">
+                             inlineStyle="border-bottom-right-radius:1px 1px; border-color:#212121; border-radius:5px 5px 5px 5px / 5px 5px 5px 5px ; border-bottom-color:Red; border-bottom-style:solid; background-color:transparent; padding:0px; box-decoration-break:clone; size:auto; border-bottom-left-radius:1em 1em;">    
+                    <af:panelGridLayout id="pt_pgl2" rendered="true" dimensionsFrom="parent" landmark="banner">
                         <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="pt_gr3">
                             <af:gridCell marginStart="5px" width="220px" id="pt_gc3">
-                                <input type="image" src="/WEB-INF/resources/images/logo_unam.gif" name="Logo" value="Logo"/>
+                                <af:image source="../images/logo_unam.gif" id="pt_i1"/>
                             </af:gridCell>
                             <af:gridCell id="pt_gc7" halign="center" valign="middle" width="auto">
                                 <af:activeOutputText value="Sistema de Gestion de Contenido" id="pt_aot1"
                                                              noWrap="true"
                                                              inlineStyle="color:Black; font-size:large; font-style:normal; font-variant:normal; text-align:center;"/>
                             </af:gridCell>
-                            <af:gridCell id="pt_gc4" width="auto">
-                                <af:toolbar id="pt_t1">
-                                    <af:link text="Not Logged In?" id="pt_l1"/>
-                                    <af:button text="Log In" id="pt_b1"/>
-                                </af:toolbar>
-                            </af:gridCell>
                         </af:gridRow>
+                            <af:panelBorderLayout id="pt_pbl1">
+                            <f:facet name="start"/>
+                            <f:facet name="bottom"/>
+                            <f:facet name="end"/>
+                            <f:facet name="top"/>
+                             <af:toolbar id="pt_t1">
+                                        <af:link text="Not Logged In?" id="pt_l1"/>
+                                        <af:button text="Log In" id="pt_b1"/>
+                            </af:toolbar>
+                        </af:panelBorderLayout>
                     </af:panelGridLayout>
-                    
+                   
                 </af:gridCell>
-            </af:gridRow>
+
+                <!-- Fin Header -->
+            </af:gridRow>     
             <af:gridRow height="100%" id="pt_gr2">
                 <af:gridCell width="100%" halign="stretch" valign="stretch" id="pt_gc1">
                     <af:panelSplitter orientation="vertical" positionedFromEnd="true" splitterPosition="50" id="pt_ps1">
