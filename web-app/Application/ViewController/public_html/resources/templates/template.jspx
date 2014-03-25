@@ -35,17 +35,22 @@
                                                              noWrap="true"
                                                              inlineStyle="color:Black; font-size:large; font-style:normal; font-variant:normal; text-align:center;"/>
                             </af:gridCell>
+                            <!--
+                            <af:gridCell id="pt_gc4">
+                                   <af:panelBorderLayout id="pt_pbl1">
+                                        <f:facet name="start"/>
+                                        <f:facet name="bottom"/>
+                                        <f:facet name="end"/>
+                                        <f:facet name="top"/>
+                                         <af:toolbar id="pt_t1">
+                                                    <af:link text="Not Logged In?" id="pt_l1"/>
+                                                    <af:button text="Log In" id="pt_b1"/>
+                                        </af:toolbar>
+                                    </af:panelBorderLayout>
+                            </af:gridCell>
+                            -->
                         </af:gridRow>
-                            <af:panelBorderLayout id="pt_pbl1">
-                            <f:facet name="start"/>
-                            <f:facet name="bottom"/>
-                            <f:facet name="end"/>
-                            <f:facet name="top"/>
-                             <af:toolbar id="pt_t1">
-                                        <af:link text="Not Logged In?" id="pt_l1"/>
-                                        <af:button text="Log In" id="pt_b1"/>
-                            </af:toolbar>
-                        </af:panelBorderLayout>
+                         
                     </af:panelGridLayout>
                    
                 </af:gridCell>
