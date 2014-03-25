@@ -1,9 +1,0 @@
-;$Id$
-   name = JSON Response
-   description = Module for handling JSON Responses.
-   package = Drupal 7 JSON Development
-   core = 7.x
-   files[] = json_ws.module
-   ;dependencies[] = autoload
-   ;php = 5.2
-

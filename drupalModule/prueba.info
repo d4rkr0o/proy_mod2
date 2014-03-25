@@ -1,8 +1,0 @@
-;$Id$
-   name = XML Response
-   description = Module for handling XML Responses.
-   package = Drupal 7 XML Development
-   core = 7.x
-   files[] = prueba.module
-   ;dependencies[] = autoload
-   ;php = 5.2
