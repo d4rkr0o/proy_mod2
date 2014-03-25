@@ -1,0 +1,9 @@
+;$Id$
+   name = JSON Response
+   description = Module for handling JSON Responses.
+   package = JSON Development
+   core = 7.x
+   files[] = mymodule.module
+   ;dependencies[] = autoload
+   ;php = 5.2
+
