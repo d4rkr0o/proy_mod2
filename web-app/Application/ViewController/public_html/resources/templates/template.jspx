@@ -25,34 +25,24 @@
                 <!-- Header -->
                 <af:gridCell halign="stretch" valign="stretch" id="pt_gc2"
                              inlineStyle="border-bottom-right-radius:1px 1px; border-color:#212121; border-radius:5px 5px 5px 5px / 5px 5px 5px 5px ; border-bottom-color:Red; border-bottom-style:solid; background-color:transparent; padding:0px; box-decoration-break:clone; size:auto; border-bottom-left-radius:1em 1em;">    
-                    <af:panelGridLayout id="pt_pgl2" rendered="true" dimensionsFrom="parent" landmark="banner">
+               
+                    <af:panelGridLayout id="pt_pgl2">
                         <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="pt_gr3">
                             <af:gridCell marginStart="5px" width="220px" id="pt_gc3">
-                                <af:image source="../images/logo_unam.gif" id="pt_i1"/>
+                                <af:image id="pt_i1" source="/resources/images/logo_unam.gif"/>
                             </af:gridCell>
-                            <af:gridCell id="pt_gc7" halign="center" valign="middle" width="auto">
-                                <af:activeOutputText value="Sistema de Gestion de Contenido" id="pt_aot1"
-                                                             noWrap="true"
-                                                             inlineStyle="color:Black; font-size:large; font-style:normal; font-variant:normal; text-align:center;"/>
+                            <af:gridCell marginStart="5px" width="100%" id="pt_gc4" halign="start" valign="middle">
+                                <af:outputText value="Sistema de Gestion de Contenido" id="pt_ot1" inlineStyle="color:Black; font-size:large; font-style:normal; font-variant:normal; text-align:center;"/>
                             </af:gridCell>
-                            <!--
-                            <af:gridCell id="pt_gc4">
-                                   <af:panelBorderLayout id="pt_pbl1">
-                                        <f:facet name="start"/>
-                                        <f:facet name="bottom"/>
-                                        <f:facet name="end"/>
-                                        <f:facet name="top"/>
-                                         <af:toolbar id="pt_t1">
-                                                    <af:link text="Not Logged In?" id="pt_l1"/>
-                                                    <af:button text="Log In" id="pt_b1"/>
-                                        </af:toolbar>
-                                    </af:panelBorderLayout>
+                            <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="pt_gc7" halign="end"
+                                         valign="top">
+                                <af:toolbar id="pt_t1">
+                                    <af:link text="Sign Up" id="pt_l1"/>
+                                    <af:button text="Log In" id="pt_b1"/>
+                                </af:toolbar>
                             </af:gridCell>
-                            -->
                         </af:gridRow>
-                         
                     </af:panelGridLayout>
-                   
                 </af:gridCell>
 
                 <!-- Fin Header -->
@@ -62,12 +52,15 @@
                     <af:panelSplitter orientation="vertical" positionedFromEnd="true" splitterPosition="50" id="pt_ps1">
                         <f:facet name="first">
                             <!-- Content -->
-                            <af:decorativeBox id="pt_db1">
+                            <af:decorativeBox id="pt_db1" topHeight="50px" theme="medium">
                                 <f:facet name="center">
                                     <af:facetRef facetName="contenido"/>
                                 </f:facet>
                                 <f:facet name="top">
-                                    <af:facetRef facetName="titulo"/>
+                                    <af:group id="pt_g1">
+                                         <af:icon name="changed" id="pt_i2"/>
+                                         <af:facetRef facetName="titulo"/>
+                                    </af:group>
                                 </f:facet>
                             </af:decorativeBox>
                         </f:facet>
