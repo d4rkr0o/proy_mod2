@@ -1,21 +1,17 @@
 package mx.unam.ssi.sgc.webapp.utils;
 
 import java.io.Serializable;
-
 import java.util.logging.Logger;
-
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 
+@SuppressWarnings("oracle.jdeveloper.java.serialversionuid-field-missing")
 public abstract class AbstractMB implements Serializable {
 
-    protected Logger log = Logger.getLogger("Controller");
-    //protected ResourceBundle bundle = FacesContext.getCurrentInstance().
-      //      getApplication().getResourceBundle(FacesContext.getCurrentInstance(), "mensajes");
-
+    protected transient Logger log = Logger.getLogger("Controller");
 
     public static void createMessage(String summary, String detail,
-            FacesMessage.Severity severity) {
+        FacesMessage.Severity severity) {
         FacesMessage message = new FacesMessage(severity, summary, detail);
         FacesContext.getCurrentInstance().addMessage(null, message);
     }

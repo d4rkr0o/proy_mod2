@@ -2,9 +2,12 @@ package mx.unam.ssi.sgc.webapp.controller;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.faces.context.FacesContext;
+
 import mx.unam.ssi.sgc.webapp.model.Ejemplo;
 import mx.unam.ssi.sgc.webapp.service.EjemploService;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.jsf.FacesContextUtils;
 
@@ -19,32 +22,6 @@ public class TemplateController extends TemplateForm {
 
     }
 
-    public String mostrarDatos() {
-        ApplicationContext context = 
-            FacesContextUtils.getWebApplicationContext(FacesContext.getCurrentInstance());
-        EjemploService ejemploService = 
-            (EjemploService)context.getBean("ejemploService");
-        addMessage("Holaaa!!", "Holaaa!!");
-        ejemplos = ejemploService.buscarEjemplos();
-        List<Ejemplo> list = new ArrayList<Ejemplo>();
-        for (Ejemplo e: ejemplos) {
-            list.add(new Ejemplo(e.getId(), e.getPrueba()));
-        }
-        ejemplos = list;
-        return "results";
-    }
-
-    public String registrar() {
-        ApplicationContext context = 
-            FacesContextUtils.getWebApplicationContext(FacesContext.getCurrentInstance());
-        EjemploService ejemploService = 
-            (EjemploService)context.getBean("ejemploService");
-        ejemploService.registrarEjemplo(ejemplo);
-        addMessage("Exito!","Se registro correctamente");
-        ejemplos = ejemploService.buscarEjemplos();
-        ejemplo=new Ejemplo();
-        return null;
-    }
 
     public void setEjemploService(EjemploService ejemploService) {
         this.ejemploService = ejemploService;
@@ -60,6 +37,17 @@ public class TemplateController extends TemplateForm {
      */
     public String logIn() {
         // Add event code here...
+        EjemploService ejemploService;
+        ApplicationContext context;
+        
+        context = FacesContextUtils.getWebApplicationContext(FacesContext.getCurrentInstance());
+        ejemploService = (EjemploService) context.getBean("ejemploService");
+        ejemplos = ejemploService.buscarEjemplos();
+        List<Ejemplo> list = new ArrayList<Ejemplo>();
+        for (Ejemplo e: ejemplos) {
+            System.out.println(e.getPrueba());
+        }
+        //
         return "login";
     }
 }
