@@ -58,8 +58,15 @@ at oracle.javatools.data.HashStructure$Impl.putValueInKeyStruct(HashStructure.ja
 solucion: en esta liga 
 http://www.albinsblog.com/2012/01/unexpected-error-in-jdeveloper-11g.html#.UyoSgm2Qnec
  
+:::::::::::::::::::::::::::::::::::::::::
+Ojo puertos de ocnfiguracion
 
-
+http://http://128.199.194.180:1421/apex/
+OracleHTTP 1421
+DB 1521
+Drupal 8090
+http://128.199.194.180/
+::::::::::::::::::::::::::::::::::::::::::
 
 
 
