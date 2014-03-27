@@ -10,7 +10,7 @@ import mx.unam.ssi.sgc.webapp.persistence.EjemploDAO;
 public class EjemploServiceImpl implements EjemploService{
 
 
-private EjemploDAO ejemploDAO;
+    private EjemploDAO ejemploDAO;
 
 
     public List<Ejemplo> buscarEjemplos() {

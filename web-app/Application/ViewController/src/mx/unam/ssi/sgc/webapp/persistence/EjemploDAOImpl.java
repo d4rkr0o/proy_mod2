@@ -1,13 +1,12 @@
 package mx.unam.ssi.sgc.webapp.persistence;
 
 import java.sql.ResultSet;
-
 import java.sql.SQLException;
-
 import java.sql.Types;
 
 import java.util.List;
 
+import javax.sql.DataSource;
 
 import mx.unam.ssi.sgc.webapp.model.Ejemplo;
 
@@ -18,7 +17,6 @@ import org.springframework.jdbc.core.RowMapper;
 public class EjemploDAOImpl implements EjemploDAO {
 
     private JdbcTemplate template;
-    
     
 
     public List<Ejemplo> buscarEjemplo() {
@@ -43,8 +41,7 @@ public class EjemploDAOImpl implements EjemploDAO {
     public static class EjemploMapper implements RowMapper {
     
         public Ejemplo mapRow(ResultSet resultSet, int i) throws SQLException {
-            return    new Ejemplo(resultSet.getInt("id_prueba"),
-                                        resultSet.getString("prueba"));
+            return    new Ejemplo(resultSet.getInt("id_prueba"),resultSet.getString("prueba"));
             
         }
     }

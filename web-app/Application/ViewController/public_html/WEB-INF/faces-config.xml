@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <faces-config version="2.1" xmlns="http://java.sun.com/xml/ns/javaee">
+
   <application>
     <default-render-kit-id>oracle.adf.rich</default-render-kit-id>
+    <el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
   </application>
+  
   <managed-bean>
     <managed-bean-name>templateMB</managed-bean-name>
     <managed-bean-class>mx.unam.ssi.sgc.webapp.controller.TemplateController</managed-bean-class>
@@ -18,4 +21,5 @@
     </navigation-case>
   </navigation-rule>
   
+
 </faces-config>

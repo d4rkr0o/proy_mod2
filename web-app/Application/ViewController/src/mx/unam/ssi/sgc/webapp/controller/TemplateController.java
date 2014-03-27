@@ -39,9 +39,11 @@ public class TemplateController extends TemplateForm {
         // Add event code here...
         EjemploService ejemploService;
         ApplicationContext context;
-        
+        System.out.println("Hola mundo 1");
         context = FacesContextUtils.getWebApplicationContext(FacesContext.getCurrentInstance());
+        System.out.println("Hola mundo 2");
         ejemploService = (EjemploService) context.getBean("ejemploService");
+        System.out.println("Hola mundo 3");
         ejemplos = ejemploService.buscarEjemplos();
         List<Ejemplo> list = new ArrayList<Ejemplo>();
         for (Ejemplo e: ejemplos) {

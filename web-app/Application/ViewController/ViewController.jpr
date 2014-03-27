@@ -89,6 +89,7 @@
          <string v="JSF"/>
          <string v="JSP"/>
          <string v="Java"/>
+         <string v="Spring"/>
          <string v="TRINIDAD"/>
          <string v="XML"/>
       </list>
@@ -266,14 +267,6 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="Spring-sources.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Spring.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
             <value n="id" v="Resource Bundle Support"/>
             <value n="isJDK" v="false"/>
          </hash>
@@ -281,28 +274,13 @@
             <value n="id" v="Resource Bundle Variable Resolver"/>
             <value n="isJDK" v="false"/>
          </hash>
+         <hash>
+            <value n="id" v="Spring 3.1"/>
+            <value n="isJDK" v="false"/>
+         </hash>
       </list>
       <hash n="internalDefinitions">
-         <list n="libraryDefinitions">
-            <hash>
-               <list n="classPath">
-                  <url path="public_html/WEB-INF/lib/spring-sources.jar" jar-entry=""/>
-               </list>
-               <value n="deployedByDefault" v="true"/>
-               <value n="description" v="Spring-sources.jar"/>
-               <value n="id" v="Spring-sources.jar"/>
-               <value n="locked" v="true"/>
-            </hash>
-            <hash>
-               <list n="classPath">
-                  <url path="public_html/WEB-INF/lib/spring.jar" jar-entry=""/>
-               </list>
-               <value n="deployedByDefault" v="true"/>
-               <value n="description" v="Spring.jar"/>
-               <value n="id" v="Spring.jar"/>
-               <value n="locked" v="true"/>
-            </hash>
-         </list>
+         <list n="libraryDefinitions"/>
       </hash>
       <list n="libraryReferences">
          <hash>
@@ -378,19 +356,15 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <value n="id" v="Spring-sources.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="Spring.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
             <value n="id" v="Resource Bundle Support"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
             <value n="id" v="Resource Bundle Variable Resolver"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Spring 3.1"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
@@ -549,5 +523,14 @@
             <value n="version" v="11"/>
          </hash>
       </list>
+   </hash>
+   <hash n="oracle.toplink.workbench.addin">
+      <hash n="persistence-list">
+         <value n="jpa-version" v="2.0"/>
+         <value n="metamodel-generation-directory" v=""/>
+      </hash>
+   </hash>
+   <hash n="ResourceBundleOptions">
+      <list n="RegisteredResourceBundles"/>
    </hash>
 </jpr:project>
