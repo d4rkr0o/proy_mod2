@@ -3,12 +3,11 @@
 
   <application>
     <default-render-kit-id>oracle.adf.rich</default-render-kit-id>
-    <el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
   </application>
   
   <managed-bean>
     <managed-bean-name>templateMB</managed-bean-name>
-    <managed-bean-class>mx.unam.ssi.sgc.webapp.controller.TemplateController</managed-bean-class>
+    <managed-bean-class>mx.unam.ssi.sgc.webapp.controller.LogInController</managed-bean-class>
     <managed-bean-scope>application</managed-bean-scope>
   </managed-bean>
   
@@ -19,7 +18,42 @@
       <from-outcome>login</from-outcome>
       <to-view-id>/login/login.jspx</to-view-id>
     </navigation-case>
+    <navigation-case>
+      <from-outcome>detailw</from-outcome>
+      <to-view-id>/content/detail.jspx</to-view-id>
+    </navigation-case>
+    <navigation-case>
+      <from-outcome>all</from-outcome>
+      <to-view-id>/content/showall.jspx</to-view-id>
+    </navigation-case>
   </navigation-rule>
-  
-
+  <navigation-rule>
+    <from-view-id>/login/login.jspx</from-view-id>
+    <navigation-case>
+      <from-outcome>welcome</from-outcome>
+      <to-view-id>/welcome.jspx</to-view-id>
+    </navigation-case>
+    <navigation-case>
+      <from-outcome>admin</from-outcome>
+      <to-view-id>/admin/admin.jspx</to-view-id>
+    </navigation-case>
+  </navigation-rule>
+  <navigation-rule>
+    <from-view-id>/content/detail.jspx</from-view-id>
+    <navigation-case>
+      <from-outcome>returnw</from-outcome>
+      <to-view-id>/welcome.jspx</to-view-id>
+    </navigation-case>
+  </navigation-rule>
+  <navigation-rule>
+    <from-view-id>/content/showall.jspx</from-view-id>
+    <navigation-case>
+      <from-outcome>returna</from-outcome>
+      <to-view-id>/welcome.jspx</to-view-id>
+    </navigation-case>
+    <navigation-case>
+      <from-outcome>detaila</from-outcome>
+      <to-view-id>/content/detail.jspx</to-view-id>
+    </navigation-case>
+  </navigation-rule>
 </faces-config>

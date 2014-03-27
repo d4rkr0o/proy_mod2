@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+       <!--Spring Bean definitions go here-->
+      <bean id="dataSourceDBDirect" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+        <property name="url" value="jdbc:oracle:thin:@localhost:1521:XE"/>
+        <property name="username" value="webapp"/>
+        <property name="password" value="webapp"/>
+      </bean>
+  
+      <bean id="employeeDAO" class="nl.amis.spring.jdbc.EmployeeJdbcDAO">
+        <property name="dataSource" ref="dataSourceDBDirect"/>
+      </bean>
+      
+      <bean id="hrmService" class="nl.amis.spring.hrm.HrmServiceImpl">
+        <property name="employeeDao" ref="employeeDAO"/>
+      </bean>
+        <!-- MIO MIO -->
+        <bean id="dataSource" class="oracle.jdbc.pool.OracleDataSource">
+            <property name="dataSourceName" value="ds"/>
+            <property name="URL" value="jdbc:oracle:thin:@localhost:1521:XE"/>
+            <property name="user" value="webapp"/>
+            <property name="password" value="webapp"/>
+        </bean>
+        <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+            <property name="dataSource" ref="dataSource"/>
+        </bean>
+        <bean id="template" class="org.springframework.jdbc.core.JdbcTemplate">
+            <property name="dataSource" ref="dataSource"/>
+        </bean>
+        <bean id="ejemploDAO" class="mx.unam.ssi.sgc.webapp.persistence.EjemploDAOImpl">
+            <property name="template" ref="template"/>
+        </bean>
+        <bean id="ejemploService" class="mx.unam.ssi.sgc.webapp.service.EjemploServiceImpl">
+            <property name="ejemploDAO" ref="ejemploDAO"/>
+        </bean>
+</beans>
