@@ -40,7 +40,18 @@ class Articulo{
 				break;
 		}
 
+		$body=field_get_items('node', $nodo, 'body');
+		$result = field_view_field('node', $nodo, 'field_tags',array('default'));
+		$terms=$result['#object']->field_tags['und'];
+		$tags=array();
+		foreach($terms as $term){
+			array_push($tags, $term['taxonomy_term']->name);
+		}
+		
 
+
+
+		
 		$formatted_date=format_date($nodo->created,'nodes_date');
 		$imagePath="/var/www/drupal/sites/default/files/styles/medium/public/field/image/".$imageName;
 		$imgb64=base64_encode(file_get_contents($imagePath));
@@ -52,7 +63,7 @@ class Articulo{
 			$comentarios[''.$j]=$comment->comment_body ['und'][0] ['value'];
 			$j++;	
 		}
-		$elementos=array("Titulo" => $nodo->title, "Fecha" => $formatted_date , "Imagen"=>$imgb64, /**"Body" => $node->body[0]['value'],*/ "Comments" => $comentarios, "ImagePath"=>$imagePath, "Contador"=>$j);
+		$elementos=array("Titulo" => $nodo->title, "Fecha" => $formatted_date , "Imagen"=>$imgb64, "Body" => $body[0]['value'], "Comments" => $comentarios, "ImagePath"=>$imagePath, "Contador"=>$j, "Taxonomy" => $tags);
 
 		echo json_encode($elementos);
 
@@ -66,7 +77,14 @@ class Articulo{
 			$node=node_load($i);
 			$imagePath="/var/www/drupal/sites/default/files/styles/medium/public/field/image/".(string)$this->arrayNames[$j];
 			$imagenb64=base64_encode(file_get_contents($imagePath));
-			$imagenesArray=array("Titulo"=> $node->title, "Imagenb64"=>$imagenb64, "IdNodo"=>$i, "PATH IMG"=>$imagePath);
+			$result = field_view_field('node', $node, 'field_tags',array    ('default'));
+                        $terms=$result['#object']->field_tags['und'];
+                        $tags=array();
+                        foreach($terms as $term){
+                          array_push($tags, $term['taxonomy_term']->name);
+                        } 
+
+			$imagenesArray=array("Titulo"=> $node->title, "Imagenb64"=>$imagenb64, "IdNodo"=>$i, "Categorias"=>$tags);
 			$finalArray[$i]=$imagenesArray;
 
 		}
@@ -83,12 +101,12 @@ class Articulo{
     			'nid' => $node->nid,
     			'cid' => 0,
     			'pid' => 0,
-    			'uid' => 1,
+    			'uid' => 0,
     			'mail' => '',
-    			'is_anonymous' => 1,
+    			'is_anonymous' => 0,
     			'homepage' => '',
     			'status' => COMMENT_PUBLISHED,
-    			'subject' => 'dsk subject',
+    			'subject' => 'Just Cars',
     			'language' => LANGUAGE_NONE,
     			'comment_body' => array(
       			LANGUAGE_NONE => array(
