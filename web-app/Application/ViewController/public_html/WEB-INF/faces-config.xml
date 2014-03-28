@@ -7,7 +7,7 @@
   
   <managed-bean>
     <managed-bean-name>templateMB</managed-bean-name>
-    <managed-bean-class>mx.unam.ssi.sgc.webapp.controller.LogInController</managed-bean-class>
+    <managed-bean-class>mx.unam.ssi.sgc.webapp.controller.TemplateForm</managed-bean-class>
     <managed-bean-scope>application</managed-bean-scope>
   </managed-bean>
   
@@ -25,6 +25,10 @@
     <navigation-case>
       <from-outcome>all</from-outcome>
       <to-view-id>/content/showall.jspx</to-view-id>
+    </navigation-case>
+    <navigation-case>
+      <from-outcome>signin</from-outcome>
+      <to-view-id>/signin/signin.jspx</to-view-id>
     </navigation-case>
   </navigation-rule>
   <navigation-rule>
@@ -56,4 +60,26 @@
       <to-view-id>/content/detail.jspx</to-view-id>
     </navigation-case>
   </navigation-rule>
+  <navigation-rule>
+    <from-view-id>/signin/signin.jspx</from-view-id>
+    <navigation-case>
+      <from-outcome>welcomesign</from-outcome>
+      <to-view-id>/welcome.jspx</to-view-id>
+    </navigation-case>
+  </navigation-rule>
+  <managed-bean>
+    <managed-bean-name>logInMB</managed-bean-name>
+    <managed-bean-class>mx.unam.ssi.sgc.webapp.controller.LogInController</managed-bean-class>
+    <managed-bean-scope>application</managed-bean-scope>
+  </managed-bean>
+  <managed-bean>
+    <managed-bean-name>welcomeMB</managed-bean-name>
+    <managed-bean-class>mx.unam.ssi.sgc.webapp.controller.WelcomeController</managed-bean-class>
+    <managed-bean-scope>application</managed-bean-scope>
+  </managed-bean>
+  <managed-bean>
+    <managed-bean-name>signinMB</managed-bean-name>
+    <managed-bean-class>mx.unam.ssi.sgc.webapp.controller.SignInController</managed-bean-class>
+    <managed-bean-scope>application</managed-bean-scope>
+  </managed-bean>
 </faces-config>

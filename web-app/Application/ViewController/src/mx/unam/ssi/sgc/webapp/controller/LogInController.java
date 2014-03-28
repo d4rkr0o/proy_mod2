@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import mx.unam.ssi.sgc.webapp.model.Ejemplo;
-import mx.unam.ssi.sgc.webapp.service.EjemploService;
+import mx.unam.ssi.sgc.webapp.service.AdministracionUsuariosService;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -12,18 +12,26 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class LogInController extends TemplateForm {
     
-    private EjemploService ejemploService;
+    private AdministracionUsuariosService ejemploService;
 
     public LogInController(){
         renderlogin=true;
     }
 
-    public void setEjemploService(EjemploService ejemploService) {
+    public void setEjemploService(AdministracionUsuariosService ejemploService) {
         this.ejemploService = ejemploService;
     }
 
-    public EjemploService getEjemploService() {
+    public AdministracionUsuariosService getEjemploService() {
         return ejemploService;
     }
+    
+    public String closeLogIn() {
+        return "welcome";
+    }
+    public String pressLogIn(){
+        return "welcome";
+    }
+    
 
 }

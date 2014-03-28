@@ -3,14 +3,14 @@ package mx.unam.ssi.sgc.webapp.service;
 import java.util.List;
 
 import mx.unam.ssi.sgc.webapp.model.Ejemplo;
-import mx.unam.ssi.sgc.webapp.persistence.EjemploDAO;
+import mx.unam.ssi.sgc.webapp.persistence.UsuariosDAO;
 
 
 
-public class EjemploServiceImpl implements EjemploService{
+public class AdministracionUsuariosServiceImpl implements AdministracionUsuariosService{
 
 
-    private EjemploDAO ejemploDAO;
+    private UsuariosDAO ejemploDAO;
 
 
     public List<Ejemplo> buscarEjemplos() {
@@ -18,11 +18,11 @@ public class EjemploServiceImpl implements EjemploService{
     }
 
 
-    public void setEjemploDAO(EjemploDAO ejemploDAO) {
+    public void setEjemploDAO(UsuariosDAO ejemploDAO) {
         this.ejemploDAO = ejemploDAO;
     }
 
-    public EjemploDAO getEjemploDAO() {
+    public UsuariosDAO getEjemploDAO() {
         return ejemploDAO;
     }
 

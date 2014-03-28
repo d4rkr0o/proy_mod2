@@ -4,7 +4,7 @@ import java.util.List;
 
 import mx.unam.ssi.sgc.webapp.model.Ejemplo;
 
-public interface EjemploDAO {
+public interface UsuariosDAO {
 
     List<Ejemplo> buscarEjemplo();
     void insert(Ejemplo ejemplo);

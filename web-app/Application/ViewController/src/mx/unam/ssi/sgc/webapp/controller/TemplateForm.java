@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import mx.unam.ssi.sgc.webapp.model.Ejemplo;
-import mx.unam.ssi.sgc.webapp.service.EjemploService;
+import mx.unam.ssi.sgc.webapp.service.AdministracionUsuariosService;
 import mx.unam.ssi.sgc.webapp.utils.AbstractMB;
 
 import org.springframework.context.ApplicationContext;
@@ -45,20 +45,23 @@ public class TemplateForm extends AbstractMB{
     public boolean isRenderlogin() {
         return renderlogin;
     }
-
+    
+    public String signIn(){
+        return "signin";
+    }
     public String logIn() {
-        // Add event code here...
+        //////////////////////////////////////////////////////////////////////
         List<Ejemplo> ejemplos2;       
-        EjemploService ejemploService;
+        AdministracionUsuariosService ejemploService;
         ApplicationContext context;
         context = new ClassPathXmlApplicationContext("applicationContext.xml");
-        ejemploService = (EjemploService) context.getBean("ejemploService");
+        ejemploService = (AdministracionUsuariosService) context.getBean("ejemploService");
         ejemplos2 = ejemploService.buscarEjemplos();
         List<Ejemplo> list = new ArrayList<Ejemplo>();
         for (Ejemplo e: ejemplos2) {
             System.out.println(e.getPrueba());
         }
-        //
+        //////////////////////////////////////////////////////////////////////
         return "login";
     }
 }

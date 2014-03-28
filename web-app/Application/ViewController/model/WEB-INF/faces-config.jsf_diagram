@@ -34,7 +34,7 @@
       <property
          name="description">Navigation Case</property>
       <property
-         name="sdm:polyPoints">T44,137.66667,174.13153,216.0,125.33854,B38</property>
+         name="sdm:polyPoints">T44,137.66667,174.13087,216.0,125.354164,B38</property>
    </NavigationCase>
    <Page
       id="Page5">
@@ -69,16 +69,16 @@
       <property
          name="description">Navigation Case</property>
       <property
-         name="sdm:polyPoints">B62,230.66666,125.354164,351.66666,182.43233,T50</property>
+         name="sdm:polyPoints">B62,230.66666,125.354164,351.66666,182.44795,T50</property>
    </NavigationCase>
    <Page
       id="Page8">
       <property
          name="wildcard">false</property>
       <property
-         name="y">378.21875</property>
+         name="y">379.58334</property>
       <property
-         name="x">32.0</property>
+         name="x">28.0</property>
       <property
          name="jspName">/content/detail.jspx</property>
    </Page>
@@ -87,9 +87,9 @@
       <property
          name="wildcard">false</property>
       <property
-         name="y">378.83853</property>
+         name="y">376.25</property>
       <property
-         name="x">273.33334</property>
+         name="x">274.66666</property>
       <property
          name="jspName">/content/showall.jspx</property>
    </Page>
@@ -103,7 +103,7 @@
       <property
          name="description">Navigation Case</property>
       <property
-         name="sdm:polyPoints">L46,96.4751,228.53647,28.333332,321.69632,T44</property>
+         name="sdm:polyPoints">L54,96.74903,235.8698,24.333332,322.80826,T44</property>
    </NavigationCase>
    <NavigationCase
       islink="true"
@@ -115,7 +115,7 @@
       <property
          name="description">Navigation Case</property>
       <property
-         name="sdm:polyPoints">R46,185.57567,228.53647,277.0,321.6919,T56</property>
+         name="sdm:polyPoints">B44,137.66667,289.5519,230.64296,376.25,L50</property>
    </NavigationCase>
    <NavigationCase
       islink="true"
@@ -127,7 +127,7 @@
       <property
          name="description">Navigation Case</property>
       <property
-         name="sdm:polyPoints">T56,35.666668,324.06772,100.16667,235.8698,L54</property>
+         name="sdm:polyPoints">T56,31.666668,325.4323,100.16667,243.20312,L63</property>
    </NavigationCase>
    <NavigationCase
       islink="true"
@@ -139,7 +139,7 @@
       <property
          name="description">Navigation Case</property>
       <property
-         name="sdm:polyPoints">T44,269.66666,324.65625,182.50002,235.8698,R54</property>
+         name="sdm:polyPoints">L42,233.5,368.91666,145.0,286.36978,B56</property>
    </NavigationCase>
    <NavigationCase
       islink="true"
@@ -151,6 +151,41 @@
       <property
          name="description">Navigation Case</property>
       <property
-         name="sdm:polyPoints">L50,232.16666,378.85416,73.166664,378.23438,R50</property>
+         name="sdm:polyPoints">L58,229.18607,383.58334,69.166664,379.59897,R50</property>
+   </NavigationCase>
+   <Page
+      id="Page15">
+      <property
+         name="wildcard">false</property>
+      <property
+         name="y">85.45831</property>
+      <property
+         name="x">25.333332</property>
+      <property
+         name="jspName">/signin/signin.jspx</property>
+   </Page>
+   <NavigationCase
+      islink="true"
+      id="NavigationCase18"
+      from="Page2"
+      to="Page15">
+      <property
+         name="fromOutcome">signin</property>
+      <property
+         name="description">Navigation Case</property>
+      <property
+         name="sdm:polyPoints">L37,100.16667,221.20312,29.000002,139.64061,B56</property>
+   </NavigationCase>
+   <NavigationCase
+      islink="true"
+      id="NavigationCase19"
+      from="Page15"
+      to="Page2">
+      <property
+         name="fromOutcome">welcomesign</property>
+      <property
+         name="description">Navigation Case</property>
+      <property
+         name="sdm:polyPoints">B44,21.666666,142.35797,96.84599,228.53647,L46</property>
    </NavigationCase>
 </SDM>

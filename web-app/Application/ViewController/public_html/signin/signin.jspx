@@ -3,53 +3,60 @@
           xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <f:view>
-        <af:document title="login.jspx" id="d1">
+        <af:document title="signin.jspx" id="d1">
             <af:form id="f1">
                 <af:pageTemplate viewId="/resources/templates/template.jspx" id="pt1">
                     <f:facet name="contenido">
-                        <af:panelGridLayout id="pgl1" dimensionsFrom="parent">
+                         <af:panelGridLayout id="pgl1" dimensionsFrom="parent">
                             <af:gridRow marginTop="5px" height="100%" marginBottom="5px" id="gr1">
                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc1" halign="center"
                                              valign="middle">
-                                    <af:panelBox text="Log In" id="pb1" background="default" type="stretch"
+                                    <af:panelBox text="Sing In" id="pb1" background="default" type="stretch"
                                                  showHeader="always" showDisclosure="false" ramp="highlight"
                                                  inlineStyle="width:355px; height:198px; border-bottom-left-radius:5px; border-bottom-right-radius:5px; border-radius:5px 5px 5px 5px; border-top-left-radius:5px; border-top-right-radius:5px; border-left-style:ridge; border-right-style:ridge; border-top-style:inset; border-bottom-style:inset;">
                                         <f:facet name="toolbar">
-                                            <af:button text="Close" id="b2" action="welcome"/>
+                                            <af:button text="Close" id="b2" action="welcomesign"/>
                                         </f:facet>
                                         <af:panelGridLayout id="pgl2">
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
-                                                    <af:outputText value="User" id="ot2"/>
+                                                <af:gridCell marginStart="5px" width="50%" id="gc2">
+                                                    <af:outputText value="Name" id="ot2"/>
+                                                </af:gridCell>
+                                                <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc3">
+                                                    <af:inputText id="it1"/>
                                                 </af:gridCell>
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr3">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc3">
-                                                    <af:inputText id="it1" rows="1"/>
+                                                <af:gridCell marginStart="5px" width="50%" id="gc4">
+                                                    <af:outputText value="Last Name" id="ot3"/>
+                                                </af:gridCell>
+                                                <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc5">
+                                                    <af:inputText id="it2"/>
                                                 </af:gridCell>
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr4">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4">
-                                                    <af:outputText value="Password" id="ot3"/>
+                                                <af:gridCell marginStart="5px" width="50%" id="gc6">
+                                                    <af:outputText value="User (mail)" id="ot4"/>
+                                                </af:gridCell>
+                                                <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc7">
+                                                    <af:inputText id="it3"/>
                                                 </af:gridCell>
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr5">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
-                                                    <af:inputText id="it2" secret="true"/>
+                                                <af:gridCell marginStart="5px" width="50%" id="gc8">
+                                                    <af:outputLabel value="Password" id="ol1"/>
+                                                </af:gridCell>
+                                                <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc9">
+                                                    <af:inputText id="it4"/>
                                                 </af:gridCell>
                                             </af:gridRow>
-                                            <af:gridRow marginTop="5px" height="auto" id="gr6">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6"
-                                                             inlineStyle="border-bottom-style:groove;">
-                                                    <af:button text="Log In" id="b1" action="#{logInMB.pressLogIn}"/>
+                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr6">
+                                                <af:gridCell marginStart="5px" width="50%" id="gc10">
+                                                    <af:button text="Sign IN" id="b1"
+                                                               inlineStyle="background-color:currentColor;"
+                                                               action="#{signinMB.pressSignIn}"/>
                                                 </af:gridCell>
-                                            </af:gridRow>
-                                            <af:gridRow marginTop="5px" height="auto" id="gr7"/>
-                                            <af:gridRow marginTop="5px" height="auto" id="gr8">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc8"/>
-                                            </af:gridRow>
-                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr9">
-                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc9"/>
+                                                <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc11"/>
                                             </af:gridRow>
                                         </af:panelGridLayout>
                                     </af:panelBox>
@@ -58,7 +65,7 @@
                         </af:panelGridLayout>
                     </f:facet>
                     <f:facet name="titulo">
-                           <af:outputText value="Login" id="ot1"
+                     <af:outputText value="Sign IN" id="ot1"
                                        inlineStyle="color:Orange; font-size:large; font-style:normal; font-variant:normal; text-align:center;"/>
                     </f:facet>
                 </af:pageTemplate>

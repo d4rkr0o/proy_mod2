@@ -14,7 +14,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
 
-public class EjemploDAOImpl implements EjemploDAO {
+public class UsuariosDAOImpl implements UsuariosDAO {
 
     private JdbcTemplate template;
     
