@@ -1,8 +1,6 @@
 package mx.unam.ssi.sgc.webapp.service;
 
 import java.util.List;
-
-import mx.unam.ssi.sgc.webapp.model.Ejemplo;
 import mx.unam.ssi.sgc.webapp.persistence.UsuariosDAO;
 
 
