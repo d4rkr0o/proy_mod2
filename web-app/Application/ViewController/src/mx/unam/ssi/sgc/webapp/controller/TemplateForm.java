@@ -3,7 +3,6 @@ package mx.unam.ssi.sgc.webapp.controller;
 import java.util.ArrayList;
 import java.util.List;
 
-import mx.unam.ssi.sgc.webapp.model.Ejemplo;
 import mx.unam.ssi.sgc.webapp.service.AdministracionUsuariosService;
 import mx.unam.ssi.sgc.webapp.utils.AbstractMB;
 
@@ -12,24 +11,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class TemplateForm extends AbstractMB{
     
-    protected Ejemplo ejemplo;
     protected String  signed;
-    protected boolean renderlogin;
 
-   
     public TemplateForm() {
         signed="Sign IN";
-        renderlogin=true;
-        ejemplo=new Ejemplo();
     }
     
-    public void setEjemplo(Ejemplo ejemplo) {
-        this.ejemplo = ejemplo;
-    }
-
-    public Ejemplo getEjemplo() {
-        return ejemplo;
-    }
     /************************************************************/
     public void setSigned(String signed) {
         this.signed = signed;
@@ -38,19 +25,14 @@ public class TemplateForm extends AbstractMB{
     public String getSigned() {
         return signed;
     }
-    public void setRenderlogin(boolean renderlogin) {
-        this.renderlogin = renderlogin;
-    }
 
-    public boolean isRenderlogin() {
-        return renderlogin;
-    }
     
     public String signIn(){
         return "signin";
     }
     public String logIn() {
         //////////////////////////////////////////////////////////////////////
+        /*
         List<Ejemplo> ejemplos2;       
         AdministracionUsuariosService ejemploService;
         ApplicationContext context;
@@ -61,7 +43,11 @@ public class TemplateForm extends AbstractMB{
         for (Ejemplo e: ejemplos2) {
             System.out.println(e.getPrueba());
         }
+        */
         //////////////////////////////////////////////////////////////////////
         return "login";
+    }
+    public String signed(){
+        return "signin";
     }
 }

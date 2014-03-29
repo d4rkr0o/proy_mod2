@@ -23,7 +23,8 @@
                                                     <af:outputText value="Name" id="ot2"/>
                                                 </af:gridCell>
                                                 <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc3">
-                                                    <af:inputText id="it1"/>
+                                                    <af:inputText id="it1" value="#{signinMB.userName}"
+                                                                  showRequired="true"/>
                                                 </af:gridCell>
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr3">
@@ -31,7 +32,8 @@
                                                     <af:outputText value="Last Name" id="ot3"/>
                                                 </af:gridCell>
                                                 <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc5">
-                                                    <af:inputText id="it2"/>
+                                                    <af:inputText id="it2" value="#{signinMB.userLastName}"
+                                                                  showRequired="true"/>
                                                 </af:gridCell>
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr4">
@@ -39,7 +41,8 @@
                                                     <af:outputText value="User (mail)" id="ot4"/>
                                                 </af:gridCell>
                                                 <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc7">
-                                                    <af:inputText id="it3"/>
+                                                    <af:inputText id="it3" value="#{signinMB.userId}"
+                                                                  showRequired="true"/>
                                                 </af:gridCell>
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr5">
@@ -47,7 +50,8 @@
                                                     <af:outputLabel value="Password" id="ol1"/>
                                                 </af:gridCell>
                                                 <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc9">
-                                                    <af:inputText id="it4"/>
+                                                    <af:inputText id="it4" secret="true" showRequired="true"
+                                                                  value="#{signinMB.passwd}"/>
                                                 </af:gridCell>
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr6">
@@ -68,6 +72,7 @@
                      <af:outputText value="Sign IN" id="ot1"
                                        inlineStyle="color:Orange; font-size:large; font-style:normal; font-variant:normal; text-align:center;"/>
                     </f:facet>
+                    <f:attribute name="login" value="true"/>
                 </af:pageTemplate>
             </af:form>
         </af:document>

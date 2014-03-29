@@ -11,8 +11,8 @@ public class AdministracionUsuariosServiceImpl implements AdministracionUsuarios
     private UsuariosDAO ejemploDAO;
 
 
-    public List<Ejemplo> buscarEjemplos() {
-        return ejemploDAO.buscarEjemplo();
+    public List<String> buscarEjemplos() {
+        return null;
     }
 
 
@@ -24,7 +24,7 @@ public class AdministracionUsuariosServiceImpl implements AdministracionUsuarios
         return ejemploDAO;
     }
 
-    public void registrarEjemplo(Ejemplo ejemplo) {
-        ejemploDAO.insert(ejemplo);
+    public void registrarEjemplo(String ejemplo) {
+        //ejemploDAO.insert(ejemplo);
     }
 }

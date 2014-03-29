@@ -193,6 +193,7 @@
                                        inlineStyle="color:Orange; font-size:large; font-style:normal; font-variant:normal; text-align:center;"/>
                         <af:icon name="required" id="i1"/>
                     </f:facet>
+                    <f:attribute name="login" value="true"/>
                 </af:pageTemplate>
             </af:form>
         </af:document>

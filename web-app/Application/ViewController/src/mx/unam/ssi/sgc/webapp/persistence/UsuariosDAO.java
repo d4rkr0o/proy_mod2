@@ -2,10 +2,10 @@ package mx.unam.ssi.sgc.webapp.persistence;
 
 import java.util.List;
 
-import mx.unam.ssi.sgc.webapp.model.Ejemplo;
+
 
 public interface UsuariosDAO {
 
-    List<Ejemplo> buscarEjemplo();
-    void insert(Ejemplo ejemplo);
+//    List<Ejemplo> buscarEjemplo();
+//    void insert(Ejemplo ejemplo);
 }

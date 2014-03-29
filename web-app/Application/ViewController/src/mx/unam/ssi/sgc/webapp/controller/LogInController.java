@@ -1,21 +1,31 @@
 package mx.unam.ssi.sgc.webapp.controller;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import mx.unam.ssi.sgc.webapp.model.Ejemplo;
 import mx.unam.ssi.sgc.webapp.service.AdministracionUsuariosService;
-
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
 
 public class LogInController extends TemplateForm {
     
     private AdministracionUsuariosService ejemploService;
+    private String user="";
+    private String password="";
+
+    public void setUser(String user) {
+        this.user = user;
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getPassword() {
+        return password;
+    }
 
     public LogInController(){
-        renderlogin=true;
+        //
     }
 
     public void setEjemploService(AdministracionUsuariosService ejemploService) {
@@ -27,9 +37,15 @@ public class LogInController extends TemplateForm {
     }
     
     public String closeLogIn() {
+        user="";
+        password="";
         return "welcome";
     }
     public String pressLogIn(){
+        //Code goes here...
+        user="";
+        password="";
+        //....
         return "welcome";
     }
     
