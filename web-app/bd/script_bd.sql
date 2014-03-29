@@ -13,6 +13,6 @@
     camp_8 VARCHAR(45)    ,
     camp_9 VARCHAR(45)    ,
   PRIMARY KEY(idUsuario));
-INSERT usuarios (idUsuario,nombre,apellido,contrasena) VALUES ("admin@admin","Administrator","Admin","08dc39f5d2ee9fb1b4c74c96cb848924571275b8");
+INSERT INTO usuarios (idUsuario,nombre,apellido,contrasena) VALUES ('admin@admin','Administrator','Admin','08dc39f5d2ee9fb1b4c74c96cb848924571275b8');
 COMMIT;
 
