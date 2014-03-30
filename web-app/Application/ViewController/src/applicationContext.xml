@@ -21,6 +21,7 @@
         <bean id="usuariosDAO" class="mx.unam.ssi.sgc.webapp.persistence.UsuariosDAOImpl">
             <property name="template" ref="template"/>
         </bean>
+        
         <bean id="AdminUsuariosService" class="mx.unam.ssi.sgc.webapp.service.AdministracionUsuariosServiceImpl">
             <property name="usuariosDAO" ref="usuariosDAO"/>
         </bean>

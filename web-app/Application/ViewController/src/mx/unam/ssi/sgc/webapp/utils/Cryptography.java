@@ -4,11 +4,9 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 public class Cryptography {
-    public Cryptography() {
-        super();
-    }
+
     //Ismael Hernandez Millares
-    public String sha1(String password) throws NoSuchAlgorithmException {
+    public static String sha1(String password) throws NoSuchAlgorithmException {
         MessageDigest md = MessageDigest.getInstance("SHA1");
         byte[] result = md.digest(password.getBytes());
         StringBuilder sb = new StringBuilder();

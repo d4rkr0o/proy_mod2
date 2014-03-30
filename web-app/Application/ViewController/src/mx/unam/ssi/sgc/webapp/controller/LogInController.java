@@ -13,9 +13,13 @@ import mx.unam.ssi.sgc.webapp.service.AdministracionUsuariosService;
 
 public class LogInController extends TemplateForm {
     
-    private AdministracionUsuariosService ejemploService;
+    
     private String user="";
     private String password="";
+    
+    public LogInController(){
+        //
+    }
 
     public void setUser(String user) {
         this.user = user;
@@ -33,18 +37,8 @@ public class LogInController extends TemplateForm {
         return password;
     }
 
-    public LogInController(){
-        //
-    }
 
-    public void setEjemploService(AdministracionUsuariosService ejemploService) {
-        this.ejemploService = ejemploService;
-    }
 
-    public AdministracionUsuariosService getEjemploService() {
-        return ejemploService;
-    }
-    
     public String closeLogIn() {
         user="";
         password="";
@@ -53,8 +47,7 @@ public class LogInController extends TemplateForm {
     public String pressLogIn(){
         String goes=null;
         //Code goes here...
-        user="";
-        password="";
+
         FacesContext facesContext = FacesContext.getCurrentInstance();
         String currentPage = facesContext.getViewRoot().getViewId();
         HttpSession session = (HttpSession) facesContext.getExternalContext().getSession(false);
@@ -84,6 +77,8 @@ public class LogInController extends TemplateForm {
             goes="welcome";
         }       
         //....
+        user="";
+        password="";
         return goes;
     }
     
