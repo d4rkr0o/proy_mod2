@@ -28,7 +28,7 @@
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr4">
                                                 <af:gridCell marginStart="5px" width="50%" id="gc6">
-                                                    <af:outputText value="User (mail)" id="ot4"/>
+                                                    <af:outputText value="User" id="ot4"/>
                                                 </af:gridCell>
                                                 <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc7">
                                                     <af:inputText id="it3" value="#{signinMB.userId}"
