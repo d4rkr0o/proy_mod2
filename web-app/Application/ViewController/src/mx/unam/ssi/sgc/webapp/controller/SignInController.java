@@ -8,6 +8,9 @@ import mx.unam.ssi.sgc.webapp.service.AdministracionUsuariosService;
 import model.*;
 import mx.unam.ssi.sgc.webapp.utils.Cryptography;
 import javax.faces.context.FacesContext;
+
+import mx.unam.ssi.sgc.webapp.utils.FormatValidation;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -53,6 +56,8 @@ public class SignInController extends TemplateForm {
     }
     public String pressSignIn(){
         // Code goes here
+        
+        if (FormatValidation.validar(userId)){
         User usuario = new User();
         usuario.setUserName(userId);
         try {
@@ -67,6 +72,12 @@ public class SignInController extends TemplateForm {
         AdminUsuariosService.registrarEjemplo(usuario);
         //////////////////////////////////////////////////////////////////////
         // ...
+        System.out.println("usuario valido");
         return "welcomesign";
+        }
+        else{
+            System.out.println("ususario invalido");
+            return "nosign";
+        }
     }
 }
