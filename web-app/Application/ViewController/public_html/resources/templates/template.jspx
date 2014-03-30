@@ -51,8 +51,8 @@
                             <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="pt_gc7" halign="end"
                                          valign="top">
                                 <af:toolbar id="pt_t1">
-                                    <af:link text="#{templateMB.signed}" id="signup" action="#{templateMB.signed}"/>
-                                    <af:button text="Log In" id="login" selected="false" inlineStyle="color:Black;"
+                                    <af:link text="#{templateMB.signed}" id="signup" action="#{templateMB.signIn}"/>
+                                    <af:button text="#{templateMB.sessionMsg}" id="login" selected="false" inlineStyle="color:Black;"
                                                action="#{templateMB.logIn}" rendered="#{attrs.login}"/>
                                 </af:toolbar>
                             </af:gridCell>
