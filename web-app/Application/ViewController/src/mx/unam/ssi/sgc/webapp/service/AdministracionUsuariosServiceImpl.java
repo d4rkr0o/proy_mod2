@@ -14,6 +14,14 @@ public class AdministracionUsuariosServiceImpl implements AdministracionUsuarios
 
     private UsuariosDAO usuariosDAO;
 
+    public void setUsuariosDAO(UsuariosDAO usuariosDAO) {
+        this.usuariosDAO = usuariosDAO;
+    }
+
+    public UsuariosDAO getUsuariosDAO() {
+        return usuariosDAO;
+    }
+
 
     public List<User> getUsuarios() {
         //
@@ -23,5 +31,6 @@ public class AdministracionUsuariosServiceImpl implements AdministracionUsuarios
     
     public void registrarEjemplo(User ejemplo) {
         // TODO Implement this method
+        usuariosDAO.insert(ejemplo);
     }
 }

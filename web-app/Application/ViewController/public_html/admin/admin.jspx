@@ -11,6 +11,7 @@
                            <af:outputText value="Administracion" id="ot1"
                                           inlineStyle="color:Orange; font-size:large; font-style:normal; font-variant:normal; text-align:center;"/>
                     </f:facet>
+                    <f:attribute name="login" value="true"/>
                 </af:pageTemplate>
             </af:form>
         </af:document>

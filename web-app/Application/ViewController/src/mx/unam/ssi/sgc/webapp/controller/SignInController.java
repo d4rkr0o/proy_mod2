@@ -63,7 +63,7 @@ public class SignInController extends TemplateForm {
         List ejemploService;
         ApplicationContext context;
         context = new ClassPathXmlApplicationContext("applicationContext.xml");
-        AdminUsuariosService= (AdministracionUsuariosService) context.getBean("ejemploService");
+        AdminUsuariosService= (AdministracionUsuariosService) context.getBean("AdminUsuariosService");
         AdminUsuariosService.registrarEjemplo(usuario);
         //////////////////////////////////////////////////////////////////////
         // ...

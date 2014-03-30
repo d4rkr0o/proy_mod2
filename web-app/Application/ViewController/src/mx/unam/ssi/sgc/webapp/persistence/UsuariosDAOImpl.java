@@ -31,7 +31,7 @@ public class UsuariosDAOImpl implements UsuariosDAO {
     @Override
     public void insert(User usuario) {
           
-          template.update("INSERT INTO usuarios (idUsuario,contrasena,isAdmin) VALUES (?,?,?,?,0)",
+          template.update("INSERT INTO usuarios (idUsuario,contrasena,isAdmin) VALUES (?,?,0)",
                           usuario.getUserName(),usuario.getPassword());
          
     }
