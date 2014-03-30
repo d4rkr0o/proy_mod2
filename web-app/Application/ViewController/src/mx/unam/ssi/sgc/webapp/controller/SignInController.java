@@ -12,8 +12,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class SignInController extends TemplateForm {
-    private String userName="";
-    private String userLastName="";
     private String passwd="";
     private String userId="";
     
@@ -28,21 +26,7 @@ public class SignInController extends TemplateForm {
     }
 
 
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
 
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserLastName(String userLastName) {
-        this.userLastName = userLastName;
-    }
-
-    public String getUserLastName() {
-        return userLastName;
-    }
 
     public void setPasswd(String passwd) {
         this.passwd = passwd;
@@ -70,9 +54,6 @@ public class SignInController extends TemplateForm {
     public String pressSignIn(){
         // Code goes here
         User usuario = new User();
-                
-        usuario.setNombre(userName);
-        usuario.setApellido(userLastName);
         usuario.setUserName(userId);
         try {
             usuario.setPassword(Cryptography.sha1(passwd));

@@ -61,7 +61,7 @@ public class LogInController extends TemplateForm {
                 Noticia[] noticias=new Noticia[9];
                 SessionObject objects= new SessionObject();
                 /*************** USER  **************************************/
-                usuario.setNombre(user);
+                usuario.setUserName(user);
             
                 /*************** NOTICIAS ***********************************/
                 

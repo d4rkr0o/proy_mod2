@@ -40,7 +40,7 @@ public class TemplateForm extends AbstractMB{
         HttpSession session = (HttpSession) facesContext.getExternalContext().getSession(false);
         if (session.getAttribute("usuario")!=null){
             SessionObject objects=(SessionObject)session.getAttribute("usuario");
-            return "Bienvenido "+objects.getUsuario().getNombre()+"!";           
+            return "Bienvenido "+objects.getUsuario().getUserName()+"!";           
         }
         return "Sign IN";
     }
@@ -49,7 +49,7 @@ public class TemplateForm extends AbstractMB{
     public String signIn(){
         FacesContext facesContext = FacesContext.getCurrentInstance();
         HttpSession session = (HttpSession) facesContext.getExternalContext().getSession(false);
-        if (session.getAttribute("usuario")!=null)
+        if (session.getAttribute("usuario")==null)
             return "signin";
         return null;
     }

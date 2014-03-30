@@ -19,22 +19,12 @@
                                         </f:facet>
                                         <af:panelGridLayout id="pgl2">
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
-                                                <af:gridCell marginStart="5px" width="50%" id="gc2">
-                                                    <af:outputText value="Name" id="ot2"/>
-                                                </af:gridCell>
-                                                <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc3">
-                                                    <af:inputText id="it1" value="#{signinMB.userName}"
-                                                                  showRequired="true"/>
-                                                </af:gridCell>
+                                                <af:gridCell marginStart="5px" width="50%" id="gc2"/>
+                                                <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc3"/>
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr3">
-                                                <af:gridCell marginStart="5px" width="50%" id="gc4">
-                                                    <af:outputText value="Last Name" id="ot3"/>
-                                                </af:gridCell>
-                                                <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc5">
-                                                    <af:inputText id="it2" value="#{signinMB.userLastName}"
-                                                                  showRequired="true"/>
-                                                </af:gridCell>
+                                                <af:gridCell marginStart="5px" width="50%" id="gc4"/>
+                                                <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc5"/>
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr4">
                                                 <af:gridCell marginStart="5px" width="50%" id="gc6">
