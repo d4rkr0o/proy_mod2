@@ -1,0 +1,7 @@
+Intrucciones serverConf
+
+Este directorio contiene los archivos de configuracion necesarios (solo los modificados) para los servidores tomcat y glassFish,
+los cuales fueron las primeras dos pruebas preliminares del proyecto, estas configuraciones unicamente estan centradas en la correcta ejecucion del 
+CGI.
+
+Omar Dominguez

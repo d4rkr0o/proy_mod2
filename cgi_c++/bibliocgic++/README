@@ -1,0 +1,17 @@
+Intrucciones para el uso de las bibliotecas de cgi y boost, las cuales son necesarias para la compilacion y ejecucion del CGI.
+Para las bibliotecas de CGI:
+### Una vez descomprimido se va al directorio:
+cd cgicc-3.2.12/
+### Se realiza la configuracion de la biblioteca en /usr y especificando compilador y precompilador de 32 bits
+./configure --prefix=/usr CXXFLAGS="-m32" CFLAGS="-m32" LDFLAGS="-m32"
+### Se realiza la compilacion de la biblioteca
+make
+make install
+
+
+Para la biblioteca boost, se usara tambien el directorio "boost", cual debe ser copiado a /usr/include 
+y ya
+
+Del resto, se encargara el makefile del CGI
+
+Omar Dominguez
