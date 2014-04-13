@@ -37,12 +37,11 @@ int main(int argc, char **argv)
 	cout << HTMLDoctype(HTMLDoctype::eStrict) << endl;
 	// LENGUAJE  <html lang="en" dir="LTR">
 	cout << html().set("lang", "ES").set("dir", "LTR") << endl;
-  // Set up the HTML document
+  // Inicio del archivo CGI
 	cout << html() << head() << title("Bienvenido Webapp Mod2") << head() << endl;
 	//cout << body().set("bgcolor","#cccccc").set("text","#000000").set("link","#0000ff").set("vlink","#000080") << endl;
 	cout << body().set("bgcolor","#CFC9C9").set("text","#000000") << endl;
 	cout << h1("Pagina de login") << endl;
-	passBase = query("omar");
 	form_iterator fuser = formData.getElement("user");
 	if( !fuser->isEmpty() && fuser != (*formData).end())
 		usuario=**fuser;
